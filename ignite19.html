@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ignite'19-Synergy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/synergy.jpeg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span><img src="img/FooterLogo.png" alt="" > </span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+            <style>
+                .navbar-brand img {
+                    width: 80px;
+                    height: 40px;
+                }
+                
+                .dropdown {
+                    position: absolute;
+                    display: none;
+                    list-style-type: none;
+                    border-radius: 6px;
+                    margin: auto;
+                    padding: 10px;
+                    background-color: black;
+                }
+                
+                .dropdown li {
+                    display: block;
+                    margin: auto;
+                    padding: 5px 10px;
+                }
+                
+                .dropdown li a {
+                    text-align: center;
+                    color: white;
+                }
+                
+                .dropdown::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 30%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent black transparent;
+                }
+                
+                .dropdownMymenu:hover .dropdown {
+                    display: block;
+                }
+                
+                @media only screen and (max-width: 992px) {
+                    .dropdown {
+                        display: block;
+                        position: initial;
+                        background-color: orange;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+                    .dropdown li {
+                        padding: 5px;
+                    }
+                    .dropdown li a {
+                        text-align: center;
+                        color: black;
+                    }
+                    .navbar-brand {
+                        padding: 0px 5px;
+                    }
+                    .navbar-brand img {
+                        width: 60px;
+                        height: 30px;
+                    }
+                }
+            </style>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item dropdownMymenu"><a class="nav-link">Winners</a>
+                        <ul class="dropdown">
+                            <li class="nav-item"><a href="winner23.html">Winners 2023</a></li>
+                            <li class="nav-item"><a href="winner20.html">Winners 2020</a></li>
+                            <li class="nav-item"><a href="winner19.html">Winners 2019</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="nav-item dropdownMymenu active"><a class="nav-link">Ignite</a>
+                        <ul class="dropdown">
+                            <li class="nav-item"><a href="ignite24.html">Ignite 2024</a></li>
+                            <li class="nav-item"><a href="ignite23.html">Ignite 2023</a></li>
+                            <li class="nav-item"><a href="ignite21.html">Ignite 2021</a></li>
+                            <li class="nav-item"><a href="ignite20.html">Ignite 2020</a></li>
+                            <li class="nav-item"><a href="ignite19.html">Ignite 2019</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li> -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="sponsors.html" class="nav-link">Sponsors</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- Sponsors stylesheet -->
+    <style>
+        .sponsors {
+            text-align: center;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+        }
+        
+        .Sponsorstext {
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+            padding-top: 10%;
+        }
+        
+        .flip-box {
+            background-color: transparent;
+            width: 250px;
+            height: 100px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+        /* This container is needed to position the front and back side */
+        
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Position the front and back side */
+        
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+        /* Style the front side */
+        
+        .flip-box-front {
+            background-color: black;
+            color: black;
+        }
+        
+        .flip-box-front img {
+            border-radius: 10px;
+            margin: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        
+        .flip-box:hover .flip-box-inner {
+            transform: rotateX(180deg);
+        }
+        /* Style the back side */
+        
+        .flip-box-back {
+            background-color: orange;
+            color: white;
+            transform: rotateX(180deg);
+        }
+        /* .heading {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: black;
+            display: block;
+            margin: auto;
+        }
+        
+        .myimg {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            margin: 8px;
+        }
+         */
+        /* .glow {
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            background: orange;
+        } */
+        
+        .sidenav {
+            height: 100vh;
+            overflow-y: auto;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            color: white;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <!--End  Sponsors stylesheet -->
+    <!-- Sponsors code -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sponsors">Ignite'23 Sponsors</div>
+
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/probo.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">TITLE <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/unibic.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">DESSERT<br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/rabbit.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">MERCHANDISE <br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/cornitos.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">SNACKS <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/playo.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/rackonnect.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">BADMINTON EVENT<br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/enerzal.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br>ENERGY DRINK PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/carer launcher.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/ed times.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br>SOCIAL MEDIA PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/insightone.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/fisto.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PROMOTIONAL<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/grabon.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">SAVINGS<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/jhaji.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">ASSOCIATES<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/du beat.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">MEDIA<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/nature's island.png" style="width: 50px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">EVENT<br>SPONSER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/nutriquo.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">NUTRITION<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!--End Sponsors code -->
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('img/Gallery/12.JPG');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h1 class="mb-3 bread">IGNITE 19</h1>
+                    <!-- <p><a href="#" class="btn btn-primary py-3 px-4">Join the Club</a> <a href="#" class="btn btn-black py-3 px-4">Read more</a></p> -->
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Ignite'19<i class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+        <div class="container">
+            <div class="row d-flex">
+
+                <div class="col-md-12 pl-lg-5 py-5">
+                    <div class="row justify-content-start pb-3">
+                        <div class="col-md-12 heading-section ftco-animate">
+                            <h1 class="mb-4 text-center font-weight-bold">ABOUT</h1>
+                            <p style="font-size: 20px;color:black">Competing in sporting events is an integral part of the overall personality development of an individual. Keeping in harmony with this sentiment, Synergy 2018-19 organized the first edition of its Annual Sports Meet – IGNITE
+                                ’19 on 29th and 30th March 2019. True to the extravagance of the event, IGNITE was organized at the prestigious Jawaharlal Nehru Stadium in its maiden voyage.
+                                <br> Teams and individuals from all over Delhi participated in the various events organized under IGNITE. The inaugural ceremony saw the lighting of the torch and exemplary athletes carrying it around the stadium with pride.
+                                It also included cultural performances of Bharatnatyam and Western freestyle dance forms in addition to soulful renditions of songs. Apart from the various athletic events and track relays, sporting tournaments in Basketball,
+                                Volleyball, Table Tennis and Badminton.
+                                <br>
+                                <br> Elite national level players assisted the events as referees and motivated the participants. All of this built up to an extraordinary valedictory ceremony, in which medals and trophies were awarded to the participants
+                                for their excellent performance. For a first venture, IGNITE was managed and organized extremely smoothly with the assistance of students and faculty members alike, making it a grand success.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <style>
+        #footer {
+            padding: 15px;
+            padding-top: 25px;
+        }
+        
+        .text {
+            padding: 0px;
+            text-align: left;
+        }
+    </style>
+    <footer class="ftco-footer ftco-footer-2 ftco-section" id="footer">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Synergy</h2>
+                        <p class="text">The Sports Society of Indira Gandhi Delhi Technical University For Women</p>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto: synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp synergy@igdtuw.ac.in</span></a></li>
+                        </ul>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                            <li class="ftco-animate"><a href="https://www.linkedin.com/company/synergy-sports-society-of-igdtuw/"><span class="icon-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/igdtuwsportsclub"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/synergy_igdtuw/"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC1BZemcKB4j9mbwSmHNkoew"><span class="icon-youtube"></span></a></li>
+
+                        </ul>
+                        <br>
+
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Contact</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><a><span class="icon icon-map-marker"></span><span class="text"> Madrasa Road
+									Opposite St. James Church
+									Kashmere Gate
+									Delhi-110006</span></a></li>
+                                    <li><a><span class="icon icon-phone"></span><span class="text">Nandini Baliyan (President)</span></a>
+
+                                        <a><span class="icon icon-phone"></span><span class="text">Garima Gill (General Secretary)</span></a>
+    
+                                        <a><span class="icon icon-phone"></span><span class="text">Khushi Kakkar (Treasurer)</span></a>
+                                    </li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Developed by <a href="https://www.linkedin.com/in/tanya-garg-b51221145/" target="_blank">Tanya Garg (MCA, IGDTUW)</a> Web-D Core of Synergy
+                        <br>Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

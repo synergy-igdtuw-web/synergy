@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Team-Synergy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/synergy.jpeg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container nav-container">
+            <a class="navbar-brand" href="index.html"><span><img src="img/FooterLogo.png" alt="" > </span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+            <style>
+                
+
+.ftco-navbar-light .container::after{
+    background: rgba(0,0,0, 0)
+}
+                .navbar-brand img {
+                    width: 80px;
+                    height: 40px;
+                }
+                
+                .dropdown {
+                    position: absolute;
+                    display: none;
+                    list-style-type: none;
+                    border-radius: 6px;
+                    margin: auto;
+                    padding: 10px;
+                    background-color: black;
+                }
+                
+                .dropdown li {
+                    display: block;
+                    margin: auto;
+                    padding: 5px 10px;
+                }
+                
+                .dropdown li a {
+                    text-align: center;
+                    color: white;
+                }
+                
+                .dropdown::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 30%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent black transparent;
+                }
+                
+                .dropdownMymenu:hover .dropdown {
+                    display: block;
+                }
+                
+                @media only screen and (max-width: 992px) {
+                    .dropdown {
+                        display: block;
+                        position: initial;
+                        background-color: orange;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+                    .dropdown li {
+                        padding: 5px;
+                    }
+                    .dropdown li a {
+                        text-align: center;
+                        color: black;
+                    }
+                    .navbar-brand {
+                        padding: 0px 5px;
+                    }
+                    .navbar-brand img {
+                        width: 60px;
+                        height: 30px;
+                    }
+                }
+            </style>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+                    <li class="nav-item active"><a href="team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item dropdownMymenu"><a class="nav-link">Winners</a>
+                        <ul class="dropdown">
+
+                            <li class="nav-item"><a href="winner20.html">Winners 2020</a></li>
+                            <li class="nav-item"><a href="winner19.html">Winners 2019</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="nav-item dropdownMymenu"><a class="nav-link">Ignite</a>
+                        <ul class="dropdown">
+                            <li class="nav-item"><a href="ignite21.html">Ignite 2021</a></li>
+                            <li class="nav-item"><a href="ignite20.html">Ignite 2020</a></li>
+                            <li class="nav-item"><a href="ignite19.html">Ignite 2019</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item" style="float: right;cursor:pointer" onclick="openNav()"><a class="nav-link">Sponsors</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- Sponsors stylesheet -->
+    <style>
+        .sponsors {
+            text-align: center;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+        }
+        
+        .Sponsorstext {
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+            padding-top: 10%;
+        }
+        
+        .flip-box {
+            background-color: transparent;
+            width: 250px;
+            height: 100px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+        /* This container is needed to position the front and back side */
+        
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        /* Position the front and back side */
+        
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+        /* Style the front side */
+        
+        .flip-box-front {
+            background-color: black;
+            color: black;
+        }
+        
+        .flip-box-front img {
+            border-radius: 10px;
+            margin: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        
+        .flip-box:hover .flip-box-inner {
+            transform: rotateX(180deg);
+        }
+        /* Style the back side */
+        
+        .flip-box-back {
+            background-color: orange;
+            color: white;
+            transform: rotateX(180deg);
+        }
+        /* .heading {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: black;
+            display: block;
+            margin: auto;
+        }
+        
+        .myimg {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            margin: 8px;
+        }
+         */
+        /* .glow {
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            background: orange;
+        } */
+        
+        .sidenav {
+            height: 100vh;
+            overflow-y: auto;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            color: white;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <!--End  Sponsors stylesheet -->
+    <!-- Sponsors code -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sponsors">Ignite'20 Sponsors</div>
+
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/1.jpg">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">CONSTRUCTION <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/2.jpg">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">GIFTING <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/3.jpg">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">KNOWLEDGE <br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/4.jpg">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">ENTRY <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/5.jpg">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">ONLINE<br> MEDIA PARTNER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!--End Sponsors code -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('img/Gallery/8.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h1 class="mb-3 bread">MEET THE TEAM</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Team <i class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+       
+       .team-page{
+        background-image: url(team-img.jpg);
+       }
+       .team-container {
+    text-align: center;
+    margin-top: 0;
+}
+
+
+.profile{
+    position: relative;
+}
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%
+}
+@media only screen and (max-width: 930px) {
+    .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%
+}
+}
+ .linkedin{
+   background-color: #0073b1;
+   padding: 11px 15px 11px 15px;
+   border-radius: 50%;
+   color: #f1f1f1;
+}
+.linkedin:hover{
+   color: #f1f1f1;
+}
+.linkedin:visited{
+   color: #f1f1f1;
+}
+.card {
+background-color: #1d1b26;
+    color:white;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    font-size: 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+
+.card-body {
+    position: relative;
+    bottom: 35px
+}
+    </style>
+    <section class="ftco-section team-page">
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+            <div class="col-md-12 heading-section ftco-animate mb-2">
+                <h2 class="text-center mb-2 mt-2">TEAM 2022-23</h2>
+        
+            </div>
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100 ftco-animate">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> 
+                                <img src="img/Cores_22/Dinesh.jpeg"> 
+                             </div>
+                            <div class="card-title mt-4">Dr. Dinesh Ganotra<br /> <small>Faculty Advisor</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/dinesh-ganotra-3a63a527/"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- !Main -->
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/President.jpg"> </div>
+                            <div class="card-title mt-4">Khushi Punia<br /> <small>President</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/khushi-punia-7261b5204/"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Secretary.jpg"> </div>
+                            <div class="card-title mt-4">Vaidehi Varshney<br /> <small>General Secretary</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/vaidehi-varshney-19a565233"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Treasurer.jpg"> </div>
+                            <div class="card-title mt-4">Halley Okasa<br /> <small>Treasurer</small> </div>
+                             <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/halley-okasa-a133a9216/"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>  
+        <!-- !Main End-->
+        <!-- Content and Creative -->
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Nandini Baliyan_Content_Core.jpeg"> </div>
+                            <div class="card-title mt-4">Nandini Baliyan <br /> <small>Content Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nandini-baliyan-9aa720236/"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Kajal _ Creative core.jpg"> </div>
+                            <div class="card-title mt-4">Kajal Kumari <br /> <small>Creative Core</small> </div>
+                                <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/kajal-k-51777a18b"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/veethika.jpg"> </div>
+                            <div class="card-title mt-4">Veethika Eeti <br /> <small>Creative Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/veethika-eeti-1656931bb"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>  
+        <!-- Content and Creative End-->
+        <!-- EM and Media -->
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Jinisha Jain_EM_Core.jpg"> </div>
+                            <div class="card-title mt-4">Jinisha Jain  <br /> <small>EM Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/jinisha-jain-431abb208"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/aastha.jpeg"> </div>
+                            <div class="card-title mt-4">Aastha nirwana<br /> <small>EM Core</small> </div>
+                                <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/aastha-nirwana-3a149a239"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Shaily Sehgal_Media_Core.jpg"> </div>
+                            <div class="card-title mt-4">Shaily Sehgal<br /> <small>Media Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shaily-sehgal-b73786219/"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <!-- EM and Media  End-->
+        <!-- HR -->
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/alka.jpg"> </div>
+                            <div class="card-title mt-4">Alka Meena  <br /> <small>HR Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/alka-meena-165477219"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/"> </div>
+                            <div class="card-title mt-4">Kinjal Rohilla <br /> <small>HR Core</small> </div>
+                                <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/kinjal-rohilla-1230a721b"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                
+                
+            </div>
+        </div>     
+        <!-- HR end -->
+        <!-- PR -->
+        <div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+            <div class="row justify-content-center pb-5 ftco-animate">
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Vrinda Goel_PR_Core.jpg"> </div>
+                            <div class="card-title mt-4">Vrinda Goel  <br /> <small>PR Core</small> </div>
+                            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/vrinda-goel-59abb8201"><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card col-md-3 mt-100">
+                    <div class="card-content">
+                        <div class="card-body p-0">
+                            <div class="profile"> <img src="img/Cores_22/Diya_PR_Core.jpg"> </div>
+                            <div class="card-title mt-4">Diya <br /> <small>PR Core</small> </div>
+                                <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                
+                
+            </div>
+        </div>
+<!-- PR END -->
+<!-- <Sponsi Core -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/Cores_22/SomyaSingh_Sponsorship_Core.jpeg"> </div>
+                    <div class="card-title mt-4">Somya Singh  <br /> <small>Sponsorship Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/somya-singh-606091229"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/Cores_22/Prerna Rao_sponsorship_Core.jpg"> </div>
+                    <div class="card-title mt-4">Prerna Rao <br /> <small>Sponsorship Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/prerna-rao-34356822b"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>
+<!-- Sponsi End -->
+<!-- Web-D -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/Cores_22/Naiyya_WebD_Core.jpg"> </div>
+                    <div class="card-title mt-4"> Naiyya Mittal  <br /> <small>Web Development Core</small> </div>
+                    <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/Cores_22/Mahima_WebDev_Core.jpg"> </div>
+                    <div class="card-title mt-4">Mahima Pasricha<br /> <small>Web Development Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/mahima-pasricha/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>
+<!-- Web-D end  -->
+
+<!-- ***************************************************************** -->
+            <!-- 2021-2022 TEAM  -->
+<!-- ******************************************************************** -->
+<!-- !Main -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    <div class="col-md-12 heading-section ftco-animate mb-2">
+        <h2 class="text-center mb-2 mt-2">OUR FAMILY SO FAR<br/>TEAM 2021-22</h2>
+
+    </div>
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/ShreyaPrasad_President.jpg"> </div>
+                    <div class="card-title mt-4">Shreya Prasad<br /> <small>President</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shreya-prasad-b36aa81a0/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Shailja Chillar.jpg"> </div>
+                    <div class="card-title mt-4">Shailja Chillar<br /> <small>General Secretary</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shailja-chhillar-28b77b1a9/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Shruti Goel_Treasurer .jpg"> </div>
+                    <div class="card-title mt-4">Shruti Goel<br /> <small>Treasurer</small> </div>
+                     <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shruti-goel-6524541a2/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- !Main End-->
+
+<!-- EM and Media -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Halley Okasa_EM.JPG"> </div>
+                    <div class="card-title mt-4">Halley Okasa <br /> <small>EM Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/halley-okasa-a133a9216/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Khushi Punia_EM.jpg"> </div>
+                    <div class="card-title mt-4">Khushi Punia<br /> <small>EM Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/khushi-punia-7261b5204/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Kanika Gopal.jpg"> </div>
+                    <div class="card-title mt-4">Kanika Gopal<br /> <small>Media Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/kanika-gopal-36658b1a7/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+<!-- EM and Media  End-->
+<!-- Content and Creative -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Anushka verma_content team.jpg"> </div>
+                    <div class="card-title mt-4">Anushka Verma <br /> <small>Content Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/anushka-verma-6883601b8/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/kaavya.jpeg"> </div>
+                    <div class="card-title mt-4">Kavya Saxena <br /> <small>Creative Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/kaavya-saxena-251321213/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/garima.jpeg"> </div>
+                    <div class="card-title mt-4">Garima <br /> <small>Creative Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/igarima1/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- Content and Creative End-->
+<!-- HR -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Nandana.jpg"> </div>
+                    <div class="card-title mt-4">Nandana Mohanan<br/><small>HR Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nandana-mohanan-a74658221/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Anjali jha_HR.jpg"> </div>
+                    <div class="card-title mt-4">Anjali Jha <br /> <small>HR Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/anjali-jha-1195381ba/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>     
+<!-- HR end -->
+<!-- PR -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/AnushkaRajoria_PR.PNG"> </div>
+                    <div class="card-title mt-4">Anushka Rajoria <br /> <small>PR Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/anushka-rajoria-498a61205/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_21/Monal_PR (1).jpg"> </div>
+                    <div class="card-title mt-4">Monal Mittal<br /> <small>PR Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/monal-mittal-07985520b/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>
+<!-- PR END -->
+<!-- <Sponsi Core -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+<div class="row justify-content-center pb-5 ftco-animate">
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_21/Charu Singh_sponsorship.jpg"> </div>
+            <div class="card-title mt-4">Charu Singh<br /> <small>Sponsorship Core</small> </div>
+            <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_21/Anchal_sponsorship.jpg"> </div>
+            <div class="card-title mt-4">Anchal <br /> <small>Sponsorship Core</small> </div>
+                <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<!-- Sponsi End -->
+<!-- Web-D -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+<div class="row justify-content-center pb-5 ftco-animate">
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_21/Nishtha.jpg"> </div>
+            <div class="card-title mt-4"> Nishtha Goyal  <br /> <small>Web Development Core</small> </div>
+            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nishtha0801/"><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_21/PriyankaChhabra_WebD.jpeg"> </div>
+            <div class="card-title mt-4">Priyanka Chhabra<br /> <small>Web Development Core</small> </div>
+                <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/priyanka-chhabra-0191071a6/"><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<!-- Web-D end  -->
+<!-- ***************************************************************** -->
+            <!-- 2021-2022 TEAM END -->
+<!-- ******************************************************************** -->
+
+
+<!-- ***************************************************************** -->
+            <!-- 2020-2021 TEAM  -->
+<!-- ******************************************************************** -->
+<!-- !Main -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    <div class="col-md-12 heading-section ftco-animate mb-2">
+        <h2 class="text-center mb-2 mt-2">TEAM 2020-21</h2>
+
+    </div>
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/nisha.png"> </div>
+                    <div class="card-title mt-4">Nisha Singh<br /> <small>President</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nisha-singh-b95a1519a/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/shreyap.png"> </div>
+                    <div class="card-title mt-4">Shreya Prasad<br /> <small>General Secretary</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shreya-prasad-b36aa81a0/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/manya.png"> </div>
+                    <div class="card-title mt-4">Manya Kumari<br /> <small>Treasurer</small> </div>
+                     <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/manya-kumari-256665176/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- !Main End-->
+
+<!-- EM and Media -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/ritushi.png"> </div>
+                    <div class="card-title mt-4">Ritushi Shankar<br /> <small>EM Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/ritushi-shanker-a1874a1a0/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/disha.png"> </div>
+                    <div class="card-title mt-4">Disha Yadav<br /> <small>EM Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/disha-yadav-5ba9091a9/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/anushree.png"> </div>
+                    <div class="card-title mt-4">Anushree<br /> <small>Media Core</small> </div>
+                    <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+<!-- EM and Media  End-->
+<!-- Content and Creative -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/dhriti.png"> </div>
+                    <div class="card-title mt-4">Dhriti Arora<br /> <small>Content Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/dhriti-arora-b76654166/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/shailja.png"> </div>
+                    <div class="card-title mt-4">Shailja Chillar<br /> <small>Creative Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shailja-chhillar-28b77b1a9/?originalSubdomain=in"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/shreya.png"> </div>
+                    <div class="card-title mt-4">Shreya Sharma<br /> <small>Creative Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shreyahvsharma/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- Content and Creative End-->
+<!-- HR -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/aditi.png"> </div>
+                    <div class="card-title mt-4">Aditi Gupta<br/><small>HR Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/aditi-gupta-a824311a9/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/shruti.png"> </div>
+                    <div class="card-title mt-4">Shruti Goel <br /> <small>HR Core</small> </div>
+                        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/shruti-goel-6524541a2/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>     
+<!-- HR end -->
+<!-- PR -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/nandini.png"> </div>
+                    <div class="card-title mt-4">Nandini Mehla<br /> <small>PR Core</small> </div>
+                    <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/nandni-m-81b7951a5/"><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORE_20/mansi.png"> </div>
+                    <div class="card-title mt-4">Mansi Negi<br /> <small>PR Core</small> </div>
+                        <a target="_blank" class="linkedin" href=""><span class="icon-linkedin"></span></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>
+<!-- PR END -->
+<!-- <Sponsi  and web d Core -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+<div class="row justify-content-center pb-5 ftco-animate">
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_20/neha.png"> </div>
+            <div class="card-title mt-4">Neha Rana<br /> <small>Sponsorship Core</small> </div>
+            <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/neha-rana-11a4b11a4/"><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="card col-md-3 mt-100">
+    <div class="card-content">
+        <div class="card-body p-0">
+            <div class="profile"> <img src="img/CORE_20/tanya.png"> </div>
+            <div class="card-title mt-4">Tanya Garg<br /> <small>Web Development Core</small> </div>
+                <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/tanya-garg-b51221145/"><span class="icon-linkedin"></span></a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<!-- Sponsi and webd End -->
+
+<!-- ***************************************************************** -->
+            <!-- 2020-2021 TEAM END -->
+<!-- ******************************************************************** -->
+
+
+
+<!-- ***************************************************************** -->
+            <!-- 2019-2020 TEAM  -->
+<!-- ******************************************************************** -->
+<!-- !Main -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+    <div class="col-md-12 heading-section ftco-animate mb-2">
+        <h2 class="text-center mb-2 mt-2">TEAM 2019-20</h2>
+
+    </div>
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/anjali.png"> </div>
+                    <div class="card-title mt-4">Anjali Singh<br /> <small>President</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/haripriya.png"> </div>
+                    <div class="card-title mt-4">Haripriya Vats<br /> <small>General Secretary</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/ragini.png"> </div>
+                    <div class="card-title mt-4">Ragini Sharma<br /> <small>Treasurer</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- !Main End-->
+
+<!-- EM  -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/taniya.png"> </div>
+                    <div class="card-title mt-4">Taniya Rawat<br /> <small>EM Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/ayushi.png"> </div>
+                    <div class="card-title mt-4">Ayushi Yadav<br /> <small>EM Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+<!-- EM End-->
+<!-- Content and Creative -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/shreya.png"> </div>
+                    <div class="card-title mt-4">Shreya Srivatsan<br /> <small>Content Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/niyati.png"> </div>
+                    <div class="card-title mt-4">Niyati Malik<br /> <small>Creative Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/aastha.png"> </div>
+                    <div class="card-title mt-4">Aastha<br /> <small>Creative Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>  
+<!-- Content and Creative End-->
+<!-- HR  and sponsi-->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/shilpi.png"> </div>
+                    <div class="card-title mt-4">Shilpi Kumari<br/><small>HR Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/yogita.png"> </div>
+                    <div class="card-title mt-4">Yogita<br /> <small>HR Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/surmayi.png"> </div>
+                    <div class="card-title mt-4">Surmayi Sharma<br /> <small>Sponsorship Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>     
+<!-- HR end -->
+<!-- PR -->
+<div class='container mx-auto mt-3 col-md-10 mt-100 team-container'>
+
+    <div class="row justify-content-center pb-5 ftco-animate">
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/nandika.png"> </div>
+                    <div class="card-title mt-4">Nandika<br /> <small>PR Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="card col-md-3 mt-100">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile"> <img src="img/CORES_19/chetna.png"> </div>
+                    <div class="card-title mt-4">Chetna<br /> <small>PR Core</small> </div>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
+</div>
+<!-- PR END -->
+
+
+<!-- ***************************************************************** -->
+            <!-- 2019-2020 TEAM END -->
+<!-- ******************************************************************** -->
+
+<!-- <Footer  -->
+    <style>
+        #footer {
+            position: absolute;
+  bottom: 0;
+  width: 100%;
+
+        }
+        
+        .text {
+            padding: 0px;
+            text-align: left;
+        }
+    </style>
+    <footer class="ftco-footer ftco-footer-2 ftco-section" id="footer">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Synergy</h2>
+                        <p class="text">The Sports Society of Indira Gandhi Delhi Technical University For Women</p>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto: synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp synergy@igdtuw.ac.in</span></a></li>
+                        </ul>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                            <li class="ftco-animate"><a href="https://www.linkedin.com/company/synergy-sports-society-of-igdtuw/"><span class="icon-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/igdtuwsportsclub"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/synergy_igdtuw/"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC1BZemcKB4j9mbwSmHNkoew"><span class="icon-youtube"></span></a></li>
+
+                        </ul>
+                        <br>
+
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Contact</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><a><span class="icon icon-map-marker"></span><span class="text"> Madrasa Road
+									Opposite St. James Church
+									Kashmere Gate
+									Delhi-110006</span></a></li>
+                                <li><a><span class="icon icon-phone"></span><span class="text">Shreya Prasad (President) - 9752698648</span></a>
+
+                                    <a><span class="icon icon-phone"></span><span class="text">Shailja Chhillar (General Secretary) - 9540213111</span></a>
+
+                                    <a><span class="icon icon-phone"></span><span class="text">Shruti Goel (Treasurer) - 8469204759 </span></a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Developed by <a href="https://www.linkedin.com/in/tanya-garg-b51221145/" target="_blank">Tanya Garg (MCA, IGDTUW)</a> Web-D Core of Synergy
+                        <br>Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

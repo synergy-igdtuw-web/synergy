@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events-Synergy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/synergy.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span><img src="img/FooterLogo.png" alt=""> </span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <style>
+                .navbar-brand img {
+                    width: 80px;
+                    height: 40px;
+                }
+
+                .dropdown {
+                    position: absolute;
+                    display: none;
+                    list-style-type: none;
+                    border-radius: 6px;
+                    margin: auto;
+                    padding: 10px;
+                    background-color: black;
+                }
+
+                .dropdown li {
+                    display: block;
+                    margin: auto;
+                    padding: 5px 10px;
+                }
+
+                .dropdown li a {
+                    text-align: center;
+                    color: white;
+                }
+
+                .dropdown::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 30%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent black transparent;
+                }
+
+                .dropdownMymenu:hover .dropdown {
+                    display: block;
+                }
+
+                @media only screen and (max-width: 992px) {
+                    .dropdown {
+                        display: block;
+                        position: initial;
+                        background-color: orange;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+
+                    .dropdown li {
+                        padding: 5px;
+                    }
+
+                    .dropdown li a {
+                        text-align: center;
+                        color: black;
+                    }
+
+                    .navbar-brand {
+                        padding: 0px 5px;
+                    }
+
+                    .navbar-brand img {
+                        width: 60px;
+                        height: 30px;
+                    }
+                }
+            </style>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="event.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                    <li class="nav-item dropdownMymenu"><a class="nav-link">Winners</a>
+                        <ul class="dropdown">
+                            <li class="nav-item"><a href="winner23.html">Winners 2023</a></li>
+                            <li class="nav-item"><a href="winner20.html">Winners 2020</a></li>
+                            <li class="nav-item"><a href="winner19.html">Winners 2019</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="nav-item dropdownMymenu"><a class="nav-link">Ignite</a>
+                        <ul class="dropdown">
+                            <li class="nav-item"><a href="ignite24.html">Ignite 2024</a></li>
+                            <li class="nav-item"><a href="ignite23.html">Ignite 2023</a></li>
+                            <li class="nav-item"><a href="ignite21.html">Ignite 2021</a></li>
+                            <li class="nav-item"><a href="ignite20.html">Ignite 2020</a></li>
+                            <li class="nav-item"><a href="ignite19.html">Ignite 2019</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li> -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="sponsors.html" class="nav-link">Sponsors</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- Sponsors stylesheet -->
+    <style>
+        .sponsors {
+            text-align: center;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+        }
+
+        .Sponsorstext {
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: white;
+            padding-top: 10%;
+        }
+
+        .flip-box {
+            background-color: transparent;
+            width: 250px;
+            height: 100px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Position the front and back side */
+
+        .flip-box-front,
+        .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side */
+
+        .flip-box-front {
+            background-color: black;
+            color: black;
+        }
+
+        .flip-box-front img {
+            border-radius: 10px;
+            margin: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateX(180deg);
+        }
+
+        /* Style the back side */
+
+        .flip-box-back {
+            background-color: orange;
+            color: white;
+            transform: rotateX(180deg);
+        }
+
+        /* .heading {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #222;
+            animation: text 3s 1;
+            color: black;
+            display: block;
+            margin: auto;
+        }
+        
+        .myimg {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+            margin: 8px;
+        }
+         */
+        /* .glow {
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            background: orange;
+        } */
+
+        .sidenav {
+            height: 100vh;
+            overflow-y: auto;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            color: white;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+         .event-img {
+            width: 100%;
+            height: 200px;          /* same height for all */
+            object-fit: cover;      /* clean crop */
+            border-radius: 8px;     /* optional */
+            margin-top: 10px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <!--End  Sponsors stylesheet -->
+    <!-- Sponsors code -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sponsors">Ignite'23 Sponsors</div>
+
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/probo.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">TITLE <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/unibic.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">DESSERT<br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/rabbit.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">MERCHANDISE <br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/cornitos.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">SNACKS <br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/playo.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/rackonnect.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">BADMINTON EVENT<br> PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/enerzal.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br>ENERGY DRINK PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/carer launcher.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/ed times.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext"><br>SOCIAL MEDIA PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/insightone.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/fisto.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">PROMOTIONAL<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/grabon.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">SAVINGS<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/jhaji.webp" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">ASSOCIATES<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/du beat.jpeg" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">MEDIA<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/nature's island.png" style="width: 50px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">EVENT<br>SPONSER</div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="img/Sponsors/nutriquo.png" style="width: 100px;">
+                </div>
+                <div class="flip-box-back">
+                    <div class="Sponsorstext">NUTRITION<br>PARTNER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!--End Sponsors code -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('img/eventsBg.JPG');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h1 class="mb-3 bread">Events</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                                    class="ion-ios-arrow-forward"></i></a></span> <span>Events<i
+                                class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .heading-section .subheading {
+            font-size: 1.5rem;
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+    <!-- EVENTS -->
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <br>
+                <span class="subheading">Recent Events(2024-2025)</span>
+            </div>
+        </div>
+    
+        <div class="row">
+    
+            <div class="col-md-4">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="NationalSports()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">National Sport Day</h4>
+                                <img src="national sport day.jpg" class="event-img">
+                                <span class="date">27th August 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="DiwaliFest()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">Diwali Fest X Freshers</h4>
+                                <img src="diwali dest.jpg" class="event-img">
+                                <span class="date">27 September 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="DiwaliFest()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">BB Tournament</h4>
+                                <img src="basketball tournament.jpg" class="event-img">
+                                <span class="date">12 November 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Recent Events(2023-2024)</span>
+            </div>
+        </div>
+        <div class="row ">
+
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="khokho()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">Kho Kho</h4>
+                                <img src="img/khokho/khokho.png" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">30 October 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="tugowar()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">Tug-O-War</h4>
+                                <img src="img/tug-o-war-1.jpeg" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">20 September 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="bgmi()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Online</span>
+                                <h4 class="team-name">BGMI</h4>
+                                <img src="img/bgmi-1.jpeg" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">5-10 August 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="basketball()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">Basketball</h4>
+                                <img src="img/basketball/13.jpg" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">22 August 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="chess()">
+                            <div class="img logo" style="background-image: url(img/chessBattleIcon23.webp);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Online Event</span>
+                                <h4 class="team-name">Chess Battle</h4>
+                                <img src="img/chess23/chessBattle23.jpeg" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">23rd - 25th May 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="funfiesta()">
+                            <div class="img logo" style="background-image: url(img/funfiesta23/funfiestaC.jpeg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Offline Event</span>
+                                <h4 class="team-name">Fun Fiesta</h4>
+                                <img src="img/funfiesta23/funfiesta.png" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">23rd June 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center" onclick="cod()">
+                            <div class="img logo" style="background-image: url(img/cod23/codC.png);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Online Event</span>
+                                <h4 class="team-name">Call of Duty</h4>
+                                <img src="img/cod23/cod.png" alt="" style="height: 100%; width: 70%;"><br>
+                                <span class="date">28th July 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Recent' Events -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Recent Events(2022-2023)</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/pass\ the\ ball_2.png);"></div>
+                            <div class="pl-4 desc">
+                                <!-- <span class="venue">Online Event</span> -->
+                                <h4 class="team-name">7 Stones</h4>
+                                <!-- <a href="https://www.youtube.com/watch?v=y528VEvcgoY" target="_blank"> Pass The Ball</a></h4>-->
+                                <img src="img/7Stones.jpg" alt="" style="height: 70%; width: 70%;"><br>
+                                <span class="date">21 November 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/chess.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <!-- <span class="venue">Online Event</span> -->
+                                <h4 class="team-name">Dodgeball</h4>
+                                <!--<a href="https://www.youtube.com/watch?v=DDg5f05SWzo" target="_blank">Chess Tournament</a> </h4>-->
+                                <img src="img/dodgeball.jpeg" alt="" style="height: 70%; width: 70%;"><br>
+                                <span class="date">29 August 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/tabbo.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <!-- <span class="venue"> Online Event </span> -->
+                                <h4 class="team-name">Lyceums Gambit</h4>
+
+
+                                <img src="img/lyceumgambit.jpeg" alt="" style="height: 60%; width: 60%;"><br>
+
+                                <span class="date">23 July 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Past Events -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Past Events</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/pass\ the\ ball_2.png);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Online Event</span>
+                                <h4 class="team-name">Pass The Ball</h4>
+                                <!-- <a href="https://www.youtube.com/watch?v=y528VEvcgoY" target="_blank"> Pass The Ball</a></h4>-->
+                                <iframe width="200" height="180" src="https://www.youtube.com/embed/y528VEvcgoY"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe><br>
+                                <span class="date">2 Aug - 15 Aug 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/chess.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Online Event</span>
+                                <h4 class="team-name">Chess Tournament</h4>
+                                <!--<a href="https://www.youtube.com/watch?v=DDg5f05SWzo" target="_blank">Chess Tournament</a> </h4>-->
+                                <iframe width="200" height="180" src="https://www.youtube.com/embed/DDg5f05SWzo"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe><br>
+                                <span class="date">21 Aug to 27 Aug 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/tabbo.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue"> Online Event </span>
+                                <h4 class="team-name">Taboo</h4>
+
+
+                                <iframe width="200" height="180" src="https://www.youtube.com/embed/UhD_TWFOZig"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe></iframe><br>
+
+                                <span class="date">24 Sep to 27 Sep 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/psytrix.png);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue"> Online Event </span>
+                                <h4 class="team-name">Psytrix</h4>
+
+
+                                <iframe width="200" height="180" src="https://www.youtube.com/embed/wvw7RrEpweo"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe></iframe><br>
+
+                                <span class="date">9 Oct to 10 Oct 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Upcoming Events -->
+    <div class="container">
+        <!-- <div class="row">
+                <div class="col-md-12 heading-section ftco-animate mb-4">
+                    <span class="subheading">Upcoming Events</span>
+                </div>
+            </div> -->
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/game-o-mania.jpeg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Game-O-Mania</span>
+                                <h4 class="team-name">Mini Militia</h4>
+                                <span class="date">30 Jan 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/game-o-mania.jpeg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Game-O-Mania</span>
+                                <h4 class="team-name">Asphalt 9</h4>
+                                <span class="date">31 Jan 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/game-o-mania.jpeg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Game-O-Mania</span>
+                                <h4 class="team-name">Skribbl</h4>
+                                <span class="date">1 Feb 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--recent winners-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Past Winners(2022-23)</span>
+                <span class="subheading">Winners Of Chess Tournament</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/anupama.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Winner of Chess Tournament</span>
+                                <h4 class="team-name">Krishan</h4>
+                                <span class="date">DTU</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/pranati.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">1st Runner-up of Chess Tournament</span>
+                                <h4 class="team-name">Vardhaman</h4>
+                                <span class="date">Hansraj College</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/shruti.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">2nd Runner-up of Chess Tournament</span>
+                                <h4 class="team-name">Gowri Nair</h4>
+                                <span class="date">Lady Hardinge Medical College</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--past winners-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">past Winners(2021-22)</span>
+                <span class="subheading">Winners Of PSYTRIX</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/anupama.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">First - PSYTRIX</span>
+                                <h4 class="team-name">FENRIR X REBIRTH</h4>
+
+                                <!-- <span class="date">Harsha Narula<br></span>
+                                    <span class="date">Deeva Choudhary<br></span>
+                                     <span class="date">Nehal Mishra<br></span>
+                                      <span class="date">Kritika Gautam<br></span> -->
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/pranati.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Second - PSYTRIX</span>
+                                <h4 class="team-name">TEAM SUPREMACY</h4>
+
+                                <!-- <span class="date">Jinisha Jain<br></span>
+                                    <span class="date">Pranjal Maheshwari<br></span>
+                                     <span class="date">Srishti Wadhwa<br></span>
+                                      <span class="date">Jasleen Kaur<br></span> -->
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Winners Of SMASH KARTS</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/anupama.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">First - SMASH KARTS</span>
+                                <h4 class="team-name">BLISS REBELS</h4>
+
+                                <span class="date">Harsha Narula<br></span>
+                                <span class="date">Deeva Choudhary<br></span>
+                                <span class="date">Nehal Mishra<br></span>
+                                <span class="date">Kritika Gautam<br></span>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/pranati.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Second - SMASH KARTS</span>
+                                <h4 class="team-name">TOOFAN</h4>
+
+                                <span class="date">Jinisha Jain<br></span>
+                                <span class="date">Pranjal Maheshwari<br></span>
+                                <span class="date">Srishti Wadhwa<br></span>
+                                <span class="date">Jasleen Kaur<br></span>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/shruti.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Third - SMASH KARTS</span>
+                                <h4 class="team-name">SMASH HEADS</h4>
+
+                                <span class="date">Deepali<br></span>
+                                <span class="date">Rishika Pal<br></span>
+                                <span class="date">Princy<br></span>
+                                <span class="date">Jhanvee<br></span>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Winners Of Quizard Of OZ</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/anupama.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">First - Quizard Of OZ</span>
+                                <h4 class="team-name">Rachit Jain</h4>
+                                <span class="date">Galgotias University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/pranati.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Second - Quizard Of OZ</span>
+                                <h4 class="team-name">Sidhanto Mukerji</h4>
+                                <span class="date">MNIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <!-- <div class="img logo" style="background-image: url(img/chess/shruti.jpg);"></div> -->
+                            <div class="pl-4 desc">
+                                <span class="venue">Third - Quizard Of OZ</span>
+                                <h4 class="team-name">Himanshu Sharma</h4>
+                                <span class="date">JIMS GR Noida</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading-section ftco-animate mb-4">
+                <span class="subheading">Winners Of Chess Tournament</span>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12 carousel-game-schedule owl-carousel">
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/anupama.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">Winner of Chess Tournament</span>
+                                <h4 class="team-name">Anupama</h4>
+                                <span class="date">CSE (Second year)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/pranati.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">1st Runner-up of Chess Tournament</span>
+                                <h4 class="team-name">Pranati</h4>
+                                <span class="date">CSE (Fourth year)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="game-schedule">
+                        <div class="sport-team d-flex align-items-center">
+                            <div class="img logo" style="background-image: url(img/chess/shruti.jpg);"></div>
+                            <div class="pl-4 desc">
+                                <span class="venue">2nd Runner-up of Chess Tournament</span>
+                                <h4 class="team-name">Shruti</h4>
+                                <span class="date">IT (Second year)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    </section>
+    
+    <!-- our sports family end -->
+    <style>
+        #footer {
+            padding: 15px;
+            padding-top: 25px;
+        }
+
+        .text {
+            padding: 0px;
+            text-align: left;
+        }
+    </style>
+    <footer class="ftco-footer ftco-footer-2 ftco-section" id="footer">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Synergy</h2>
+                        <p class="text">The Sports Society of Indira Gandhi Delhi Technical University For Women</p>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto: synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp
+                                        synergy@igdtuw.ac.in</span></a></li>
+                        </ul>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                            <li class="ftco-animate"><a
+                                    href="https://www.linkedin.com/company/synergy-sports-society-of-igdtuw/"><span
+                                        class="icon-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/igdtuwsportsclub"><span
+                                        class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/synergy_igdtuw/"><span
+                                        class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a
+                                    href="https://www.youtube.com/channel/UC1BZemcKB4j9mbwSmHNkoew"><span
+                                        class="icon-youtube"></span></a></li>
+
+                        </ul>
+                        <br>
+
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-2">
+                        <h2 class="ftco-heading-2">Contact</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><a><span class="icon icon-map-marker"></span><span class="text"> Madrasa Road
+                                            Opposite St. James Church
+                                            Kashmere Gate
+                                            Delhi-110006</span></a></li>
+                                            <li><a><span class="icon icon-phone"></span><span class="text">Nandini Baliyan (President)</span></a>
+
+                                                <a><span class="icon icon-phone"></span><span class="text">Garima Gill (General Secretary)</span></a>
+            
+                                                <a><span class="icon icon-phone"></span><span class="text">Khushi Kakkar (Treasurer)</span></a>
+                                            </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Developed by <a href="https://www.linkedin.com/in/tanya-garg-b51221145/" target="_blank">Tanya
+                            Garg (MCA, IGDTUW)</a> Web-D Core of Synergy
+                        <br>Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function chess() {
+            location.href = "chess.html";
+        }
+        function funfiesta() {
+            location.href = "funfiesta.html";
+        }
+        function cod() {
+            location.href = "cod.html";
+        }
+        function basketball() {
+            location.href = "basketball.html"
+        }
+        function bgmi() {
+            location.href = "bgmi.html"
+        }
+        function tugowar() {
+            location.href = "tug-o-war.html"
+        }
+        function khokho() {
+            location.href = "khokho.html";
+        }
+        function Basketballtour() {
+            location.href = "basketballtour.html";
+        }
+        function DiwaliFest() {
+            location.href = "diwalifest.html";
+        }
+        function NationalSports(){
+            location.href="nationalsports.html"
+        }
+    </script>
+</body>
+
+</html>

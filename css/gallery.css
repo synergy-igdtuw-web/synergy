@@ -1,0 +1,120 @@
+.about{
+    background:url('bg.png') ;
+    background-repeat: repeat;
+  }
+  .about-section{
+    margin: 3vw 6vw;
+  }
+  .about-heading{
+    width: 20vw;
+      padding: 0.4vw 0.8vw;
+      text-align: center;
+      background-color: #333;
+      font-family: 'customfont',sans-serif;
+      margin: 2.5vw 0;
+      border-left: 0.2vw solid #FC9918;
+  }
+  .about-heading h2{
+    color:#e82020;
+    font-size: 2vw;
+  
+  }
+  .about-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .about-img{
+    width:50%;
+    transition: .5s ease;
+    border-radius: 5px;
+    box-shadow: rgba(240, 46, 46, 0.4) 5px 5px, rgba(240, 46, 46, 0.3) 10px 10px, rgba(240, 46, 46, 0.2) 15px 15px, rgba(240, 46, 46, 0.1) 20px 20px, rgba(240, 46, 46, 0.05) 25px 25px;
+  
+  }
+    .about-img:hover{
+    box-shadow:
+    1px 1px #e82020,
+    2px 2px #e82020,
+    3px 3px #e82020,
+    4px 4px #e82020,
+    5px 5px #e82020,
+    6px 6px #e82020;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition: .5s ease;
+    }
+    .about-para{
+      margin:0 3vw;
+      font-size: 0.95rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+  @media (max-width:1010px) {
+    .about-img{
+      display: none;
+    }
+    
+    .about-heading h2{
+      font-size: 1.5rem;
+    }
+  
+    .about-para{
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  }
+  .details{
+    background:url('bg2.png') ;
+    background-repeat: repeat;
+    padding:10px 0;
+  }
+  .details-section{
+    margin: 3vw 6vw;
+  }
+  .details-heading{
+    width: 20vw;
+      padding: 0.4vw 0.8vw;
+      text-align: center;
+      background-color: rgb(22, 21, 21);
+      font-family: 'customfont',sans-serif;
+      margin: 2.5vw 0;
+      border-left: 0.2vw solid #FC9918;
+  }
+  .details-heading h2{
+    color:#e82020;
+    font-size: 2.4vw;
+  
+  }
+  .details-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .details-col{
+    padding:0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .when{
+    border-right: 2px solid #FC9918;
+    transition: all 0.3s ease-in-out 0s;
+   
+    
+  }
+  
+  .where{
+    transition: all 0.3s ease-in-out 0s;
+  
+  }
+  .when-heading{
+    font-family: 'customfont',sans-serif;
+    font-size: 3vw;
+    color: #e82020;
+  
+  }
+  .where-heading{
+    font-family: 'customfont',sans-serif;
+    font-size: 3vw;
+    color: #e82020;
+    
+  }
