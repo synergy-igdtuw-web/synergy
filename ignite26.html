@@ -97,6 +97,14 @@
             max-width: 980px;
         }
 
+        .ignite26-note-inline {
+            margin: 0 auto 20px;
+            background: #fff7d6;
+            border: 1px solid #ffdb70;
+            color: #1f2937;
+            max-width: 1100px;
+        }
+
         .ignite26-register {
             display: inline-block;
             margin-top: 18px;
@@ -122,20 +130,99 @@
             text-align: center;
         }
 
-        .ignite26-grid {
+        .ignite26-partition-wrap {
+            margin-top: 14px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+        }
+
+        .ignite26-partition {
+            border: 1px solid #dfdfdf;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .ignite26-partition-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 14px;
+            border-bottom: 1px solid #ececec;
+            background: linear-gradient(120deg, #fff6d6, #ffe38a);
+        }
+
+        .ignite26-partition-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #121212;
+        }
+
+        .ignite26-sport-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
-            margin-top: 10px;
+            padding: 12px;
         }
 
-        .ignite26-item {
-            background: #fff;
-            border: 1px solid #d9d9d9;
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
+        .ignite26-sport-card {
+            position: relative;
+            min-height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ignite26-sport-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.9) 85%);
+        }
+
+        .ignite26-sport-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+        }
+
+        .ignite26-sport-title {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+            font-weight: 900;
+            line-height: 1.25;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+        }
+
+        .ignite26-sport-meta {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .ignite26-badge {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 0.74rem;
             font-weight: 700;
+            background: rgba(255, 204, 0, 0.95);
+            color: #111;
         }
 
         .ignite26-alert {
@@ -148,12 +235,69 @@
         }
 
         @media (max-width: 768px) {
-            .ignite26-grid {
+            .ignite26-subheading {
+                font-size: 1.15rem;
+            }
+
+            .ignite26-partition-wrap {
+                gap: 16px;
+            }
+
+            .ignite26-sport-grid {
                 grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .ignite26-sport-card {
+                min-height: 165px;
+            }
+
+            .ignite26-sport-title {
+                font-size: 1rem;
+            }
+
+            .ignite26-badge {
+                font-size: 0.7rem;
+                padding: 4px 8px;
+            }
+
+            .details-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
         }
 
         @media only screen and (max-width: 992px) {
+            #thehero .the-inner {
+                min-height: auto !important;
+                padding: 100px 0 38px;
+            }
+
+            #thehero .container {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .ignite24 {
+                font-size: 0.98rem;
+                line-height: 1.65;
+            }
+
+            .ignite26-note {
+                margin-top: 14px;
+                padding: 10px 12px;
+                font-size: 0.92rem;
+                max-width: 100%;
+            }
+
+            .about .about-section,
+            .about .about_us {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
             .dropdown {
                 display: block;
                 position: initial;
@@ -241,16 +385,19 @@
 
                 <a href="form.html" class="ignite26-register">Registration Form</a>
 
-                <div class="ignite26-note">
-                    Registration Deadline: <b>28 March 2026</b>. Complete your registration within this period and enter all details correctly. The submitted information will be used for official coordination, event communication, and match scheduling.
-                    <br><br>
-                    After successful form submission, you will be shown the payment QR section on the confirmation screen.
-                </div>
             </div>
         </div>
     </section>
 
     <br>
+    <div class="container">
+        <div class="ignite26-note ignite26-note-inline">
+            Registration Deadline: <b>28 March 2026</b>. Complete your registration within this period and enter all details correctly. The submitted information will be used for official coordination, event communication, and match scheduling.
+            <br><br>
+            After successful form submission, you will be shown the payment QR section on the confirmation screen.
+        </div>
+    </div>
+
     <div class="about">
         <div class="about-section">
             <div class="about_us">
@@ -280,18 +427,102 @@
                     <h2 class="animate__animated wow wow animate__backInLeft">EVENTS</h2>
                 </div>
                 <p class="ignite26-subheading">Sports Available in Ignite 2026</p>
-                <div class="ignite26-grid">
-                    <div class="ignite26-item">100m Sprint</div>
-                    <div class="ignite26-item">200m Sprint</div>
-                    <div class="ignite26-item">400m Sprint</div>
-                    <div class="ignite26-item">Shot Put</div>
-                    <div class="ignite26-item">Relay 4 x 100m</div>
-                    <div class="ignite26-item">Relay 4 x 400m</div>
-                    <div class="ignite26-item">Chess</div>
-                    <div class="ignite26-item">Basketball</div>
-                    <div class="ignite26-item">Volleyball</div>
-                    <div class="ignite26-item">Kho Kho</div>
-                    <div class="ignite26-item">Football</div>
+                <div class="ignite26-partition-wrap">
+                    <section class="ignite26-partition">
+                        <div class="ignite26-partition-header">
+                            <h3>Individual Sports</h3>
+                        </div>
+                        <div class="ignite26-sport-grid">
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">100m Sprint</h4>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">200m Sprint</h4>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">400m Sprint</h4>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Shot Put</h4>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/chess.webp');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Chess</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 120 (per person)</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Relay 4 x 100m</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 120 (per person)</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="ignite26-partition">
+                        <div class="ignite26-partition-header">
+                            <h3>Team Sports</h3>
+                        </div>
+                        <div class="ignite26-sport-grid">
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/basketball.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Basketball</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/volleyball.jpeg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Volleyball</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/khoho.jpeg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Kho Kho</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/football.jpg');">
+                                <div class="ignite26-sport-content">
+                                    <h4 class="ignite26-sport-title">Football</h4>
+                                    <p class="ignite26-sport-meta">
+                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -362,6 +593,7 @@
                                 <li><a><span class="icon icon-phone"></span><span class="text">Pranchal (President)</span></a>
                                     <a><span class="icon icon-phone"></span><span class="text">Gunjan Ruhal (General Secretary)</span></a>
                                     <a><span class="icon icon-phone"></span><span class="text">Dodda Sai Manisri (Treasurer)</span></a>
+                                    <a><span class="icon icon-phone"></span><span class="text">Himani Varshney (Joint General Secretary)</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -371,7 +603,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p>
-                        Maintained by <a href="https://www.linkedin.com/in/aviral-kakodia-054642341/" target="_blank">Aviral Kakodia (BTECH, IGDTUW)</a> <a href="https://www.linkedin.com/in/bhavya-sinha-532676287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">and Bhavya Sinha (BTECH, IGDTUW)</a> Web-D Core of Synergy
+                        Maintained by <a href="https://www.linkedin.com/in/aviral-kakodia-054642341/" target="_blank">Aviral Kakodia (BTECH, IGDTUW)</a> and <a href="https://www.linkedin.com/in/bhavya-sinha-532676287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Bhavya Sinha (BTECH, IGDTUW)</a> - Web-D Core of Synergy
                         <br> Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());

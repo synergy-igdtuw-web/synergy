@@ -80,6 +80,48 @@ function renderSuccessPage($participantName)
     echo '</html>';
 }
 
+function handleFileUpload($inputName, $relativeDir, $baseName)
+{
+    if (!isset($_FILES[$inputName]) || $_FILES[$inputName]['error'] !== UPLOAD_ERR_OK) {
+        die("No file uploaded or upload error for {$inputName}.");
+    }
+
+    $uploadDir = __DIR__ . '/' . trim($relativeDir, '/\\') . '/';
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+    }
+
+    $fileExt = pathinfo($_FILES[$inputName]['name'], PATHINFO_EXTENSION);
+    $allowedExts = ['jpg', 'jpeg', 'png', 'pdf'];
+    if (!in_array(strtolower($fileExt), $allowedExts, true)) {
+        die("Invalid file type for {$inputName}. Allowed: JPG, JPEG, PNG, PDF");
+    }
+
+    $maxSize = 5 * 1024 * 1024; // 5MB
+    if ($_FILES[$inputName]['size'] > $maxSize) {
+        die("File size exceeds 5MB limit for {$inputName}.");
+    }
+
+    $safeBase = preg_replace('/[^A-Za-z0-9_-]/', '_', $baseName);
+    if ($safeBase === null || $safeBase === '') {
+        $safeBase = 'participant';
+    }
+    $safeBase = substr($safeBase, 0, 60);
+    $filename = $safeBase . '_' . $inputName . '_' . time() . '.' . strtolower($fileExt);
+
+    $relativePath = trim($relativeDir, '/\\') . '/' . $filename;
+    if (strlen($relativePath) > 255) {
+        die("Generated file path exceeds column length limit for {$inputName}.");
+    }
+
+    $fullPath = $uploadDir . $filename;
+    if (!move_uploaded_file($_FILES[$inputName]['tmp_name'], $fullPath)) {
+        die("Failed to save {$inputName} file.");
+    }
+
+    return $relativePath;
+}
+
 // ====== Get form data safely ======
 $EnrollmentNo = isset($_POST['EnrollmentNo']) ? trim($_POST['EnrollmentNo']) : '';
 $RegNo_EnrollNo = $EnrollmentNo; // Unified field for DB column RegNo_EnrollNo
@@ -88,6 +130,27 @@ $Affiliation = isset($_POST['Affiliation']) ? trim($_POST['Affiliation']) : '';
 $Course = isset($_POST['Course']) ? trim($_POST['Course']) : '';
 $MobileNo = isset($_POST['MobileNo']) ? trim($_POST['MobileNo']) : '';
 $EmailID = isset($_POST['EmailID']) ? trim($_POST['EmailID']) : '';
+$CoachComingRaw = isset($_POST['CoachComing']) ? trim($_POST['CoachComing']) : '';
+$CoachComing = ($CoachComingRaw === 'Yes') ? 'Yes' : (($CoachComingRaw === 'No') ? 'No' : '');
+$CoachFullName = isset($_POST['CoachFullName']) ? trim($_POST['CoachFullName']) : '';
+$CoachMobileNoRaw = isset($_POST['CoachMobileNo']) ? trim($_POST['CoachMobileNo']) : '';
+$CoachMobileNo = preg_replace('/\D/', '', $CoachMobileNoRaw);
+
+if ($CoachComing === '') {
+    die('Please select whether a coach is accompanying you.');
+}
+
+if ($CoachComing === 'Yes') {
+    if ($CoachFullName === '') {
+        die('Coach full name is required when a coach is accompanying you.');
+    }
+    if (strlen($CoachMobileNo) !== 10) {
+        die('Coach mobile number must be exactly 10 digits.');
+    }
+} else {
+    $CoachFullName = '';
+    $CoachMobileNo = '';
+}
 
 $MobileDigits = preg_replace('/\D/', '', $MobileNo);
 if (strlen($MobileDigits) !== 10) {
@@ -95,58 +158,18 @@ if (strlen($MobileDigits) !== 10) {
 }
 $MobileNo = $MobileDigits;
 
-// ====== Handle ID Card file upload for VARCHAR storage ======
-$IDCard = '';
-if (isset($_FILES['IDCard']) && $_FILES['IDCard']['error'] === UPLOAD_ERR_OK) {
-    // Ensure the upload folder exists
-    $uploadDir = __DIR__ . '/uploads/idcards/';
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0755, true);
-    }
-
-    // Validate file type
-    $fileExt = pathinfo($_FILES['IDCard']['name'], PATHINFO_EXTENSION);
-    $allowedExts = ['jpg', 'jpeg', 'png', 'pdf'];
-    if (!in_array(strtolower($fileExt), $allowedExts, true)) {
-        die('Invalid file type. Allowed: JPG, JPEG, PNG, PDF');
-    }
-
-    // Validate file size
-    $maxSize = 5 * 1024 * 1024; // 5MB
-    if ($_FILES['IDCard']['size'] > $maxSize) {
-        die('File size exceeds 5MB limit');
-    }
-
-    // Create safe unique filename so stored path fits IDCard varchar(255)
-    $safeBase = preg_replace('/[^A-Za-z0-9_-]/', '_', $RegNo_EnrollNo);
-    if ($safeBase === null || $safeBase === '') {
-        $safeBase = 'participant';
-    }
-    $safeBase = substr($safeBase, 0, 60);
-    $filename = $safeBase . '_' . time() . '.' . strtolower($fileExt);
-    $filePath = 'uploads/idcards/' . $filename;
-    $fullPath = $uploadDir . $filename;
-
-    if (strlen($filePath) > 255) {
-        die('Generated ID card path exceeds column length limit.');
-    }
-
-    // Move the uploaded file
-    if (move_uploaded_file($_FILES['IDCard']['tmp_name'], $fullPath)) {
-        $IDCard = $filePath; // Store relative path in database
-    } else {
-        die('Failed to save ID card file');
-    }
-} else {
-    die('No file uploaded or upload error');
-}
+// ====== Handle file uploads ======
+$IDCard = handleFileUpload('IDCard', 'uploads/idcards', $RegNo_EnrollNo);
+$PaymentScreenshot = handleFileUpload('PaymentScreenshot', 'uploads/payment_screenshots', $RegNo_EnrollNo);
 
 // ====== Track & Field events ======
 $A100 = isset($_POST['A100']) ? 'Yes' : 'No';
 $A200 = isset($_POST['A200']) ? 'Yes' : 'No';
 $A400 = isset($_POST['A400']) ? 'Yes' : 'No';
 $ShotPut = isset($_POST['ShotPut']) ? 'Yes' : 'No';
-$Relay = (isset($_POST['Relay']) && is_array($_POST['Relay']) && count($_POST['Relay']) > 0) ? 'Yes' : 'No';
+$allowedRelayEvents = ['4 x 100m'];
+$relaySelections = (isset($_POST['Relay']) && is_array($_POST['Relay'])) ? array_values(array_intersect($_POST['Relay'], $allowedRelayEvents)) : [];
+$Relay = count($relaySelections) > 0 ? 'Yes' : 'No';
 
 // ====== Indoor event ======
 $Chess = isset($_POST['Chess']) ? 'Yes' : 'No';
@@ -162,8 +185,10 @@ $stmt = $conn->prepare("
     INSERT INTO `2026_Participants`
     (RegNo_EnrollNo, Name, Affiliation, Course, MobileNo, EmailID,
      A100, A200, A400, ShotPut, Relay, Chess,
-     BBOption, VBOption, KKOption, FBOption, IDCard)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+     BBOption, VBOption, KKOption, FBOption,
+     CoachComing, CoachFullName, CoachMobileNo,
+     IDCard, PaymentScreenshot)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ");
 
 if (!$stmt) {
@@ -172,10 +197,12 @@ if (!$stmt) {
 
 // ====== Bind parameters ======
 $stmt->bind_param(
-    "sssssssssssssssss",
+    "sssssssssssssssssssss",
     $RegNo_EnrollNo, $Name, $Affiliation, $Course, $MobileNo, $EmailID,
     $A100, $A200, $A400, $ShotPut, $Relay, $Chess,
-    $BBOption, $VBOption, $KKOption, $FBOption, $IDCard
+    $BBOption, $VBOption, $KKOption, $FBOption,
+    $CoachComing, $CoachFullName, $CoachMobileNo,
+    $IDCard, $PaymentScreenshot
 );
 
 // ====== Execute ======

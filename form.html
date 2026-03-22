@@ -28,14 +28,8 @@
                     </div>
 
                     <div class="field">
-                        <label for="Affiliation">Affiliation</label>
-                        <select id="Affiliation" name="Affiliation" required>
-                            <option value="" selected disabled>Select affiliation</option>
-                            <option value="Student">Student</option>
-                            <option value="Faculty">Faculty</option>
-                            <option value="Alumni">Alumni</option>
-                            <option value="Guest">Guest</option>
-                        </select>
+                        <label for="Affiliation">Affiliation (College Name)</label>
+                        <input id="Affiliation" type="text" name="Affiliation" placeholder="Enter college name" required>
                     </div>
 
                     <div class="field">
@@ -70,7 +64,43 @@
                         <input id="IDCard" type="file" name="IDCard" accept="image/*,.pdf" required>
                         <span class="file-hint">Accepted: JPG, PNG, PDF (Max 5MB)</span>
                     </div>
+
+                    <div class="field field-full">
+                        <label for="PaymentScreenshot">Payment Screenshot (Upload)</label>
+                        <input id="PaymentScreenshot" type="file" name="PaymentScreenshot" accept="image/*,.pdf" required>
+                        <span class="file-hint">Accepted: JPG, PNG, PDF (Max 5MB)</span>
+                    </div>
+
+                    <div class="field field-full coach-toggle-field">
+                        <label>Will a coach be accompanying you?</label>
+                        <div class="coach-toggle" role="radiogroup" aria-label="Coach attendance">
+                            <label class="coach-option">
+                                <input type="radio" name="CoachComing" value="Yes">
+                                <span>Yes</span>
+                            </label>
+                            <label class="coach-option">
+                                <input type="radio" name="CoachComing" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="coach-details field-full" id="coachDetails" hidden>
+                        <div class="field field-full">
+                            <label for="CoachFullName">Coach Full Name</label>
+                            <input id="CoachFullName" type="text" name="CoachFullName" placeholder="Enter coach full name">
+                        </div>
+                        <div class="field field-full">
+                            <label for="CoachMobileNo">Coach Mobile No</label>
+                            <div class="phone-input-wrap">
+                                <span class="country-code">+91</span>
+                                <input id="CoachMobileNo" type="tel" name="CoachMobileNo" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" autocomplete="tel-national">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <h2>Select the Sports</h2>
 
                 <section class="event-block">
                     <h2>Track and Field</h2>
@@ -80,7 +110,6 @@
                         <label class="checkbox-button"><input type="checkbox" name="A400">400m Sprint</label>
                         <label class="checkbox-button"><input type="checkbox" name="ShotPut">Shot Put</label>
                         <label class="checkbox-button"><input type="checkbox" name="Relay[]" value="4 x 100m">Relay 4 x 100m</label>
-                        <label class="checkbox-button"><input type="checkbox" name="Relay[]" value="4 x 400m">Relay 4 x 400m</label>
                     </div>
                 </section>
 
@@ -101,29 +130,155 @@
                     </div>
                 </section>
 
+                <section class="payment-block" id="paymentBlock">
+                    <h2>Payment Details</h2>
+                    <p class="payment-note">Selected sport fees are highlighted below.</p>
+                    <div class="payment-tags" id="paymentTags">
+                        <span class="payment-empty">Select a sport to view the fee.</span>
+                    </div>
+                    <div class="qr-panel">
+                        <h3>Scan QR to Pay</h3>
+                        <img
+                            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi%3A%2F%2Fpay%3Fpa%3D8130622864%40ptsbi%26pn%3DSynergy%2520Sports%2520Fest"
+                            alt="Payment QR"
+                            class="payment-qr"
+                            loading="lazy"
+                        >
+                        <p class="upi-note">UPI ID: 8130622864@ptsbi</p>
+                    </div>
+                </section>
+
                 <button type="submit" class="submit-btn">Register Now</button>
             </form>
         </section>
     </main>
 
     <script>
-    document.querySelectorAll('.checkbox-button input[type="checkbox"]').forEach((checkbox) => {
-        const button = checkbox.closest('.checkbox-button');
+    const sportCheckboxes = Array.from(document.querySelectorAll('.checkbox-button input[type="checkbox"]'));
 
-        const syncState = () => {
-            button.classList.toggle('checked', checkbox.checked);
-        };
-
-        checkbox.addEventListener('change', syncState);
-        syncState();
-    });
+    const syncCheckboxVisualState = () => {
+        sportCheckboxes.forEach((checkbox) => {
+            const button = checkbox.closest('.checkbox-button');
+            if (button) {
+                button.classList.toggle('checked', checkbox.checked);
+            }
+        });
+    };
 
     const mobileInput = document.getElementById('MobileNo');
-    if (mobileInput) {
-        mobileInput.addEventListener('input', () => {
-            mobileInput.value = mobileInput.value.replace(/\D/g, '').slice(0, 10);
+
+    const paymentTags = document.getElementById('paymentTags');
+    const coachOptions = Array.from(document.querySelectorAll('input[name="CoachComing"]'));
+    const coachDetails = document.getElementById('coachDetails');
+    const coachFullNameInput = document.getElementById('CoachFullName');
+    const coachMobileInput = document.getElementById('CoachMobileNo');
+
+    const attachTenDigitValidation = (inputElement) => {
+        if (!inputElement) {
+            return;
+        }
+
+        inputElement.addEventListener('input', () => {
+            inputElement.value = inputElement.value.replace(/\D/g, '').slice(0, 10);
         });
-    }
+    };
+
+    const updateCoachFields = () => {
+        const selectedCoachOption = document.querySelector('input[name="CoachComing"]:checked');
+        const isCoachComing = selectedCoachOption && selectedCoachOption.value === 'Yes';
+
+        if (!coachDetails || !coachFullNameInput || !coachMobileInput) {
+            return;
+        }
+
+        coachDetails.hidden = !isCoachComing;
+        coachFullNameInput.required = isCoachComing;
+        coachMobileInput.required = isCoachComing;
+
+        if (!isCoachComing) {
+            coachFullNameInput.value = '';
+            coachMobileInput.value = '';
+        }
+    };
+
+    const isChecked = (inputName) => {
+        const input = document.querySelector(`input[name="${inputName}"]`);
+        return Boolean(input && input.checked);
+    };
+
+    const getSelectedTrackAndFieldSports = () => {
+        return Array.from(
+            document.querySelectorAll('.event-block:first-of-type .checkbox-button input[type="checkbox"]:checked')
+        ).map((input) => input.parentElement.textContent.trim());
+    };
+
+    const updatePaymentSummary = () => {
+        if (!paymentTags) {
+            return;
+        }
+
+        const selectedFees = [];
+
+        const selectedTrackSports = getSelectedTrackAndFieldSports();
+        selectedTrackSports.forEach((sportName) => {
+            selectedFees.push(`${sportName}: Rs 120 (per person)`);
+        });
+
+        if (isChecked('Chess')) {
+            selectedFees.push('Chess: Rs 120 (per person)');
+        }
+
+        if (isChecked('KKOption')) {
+            selectedFees.push('Kho Kho: Rs 1700 (per team)');
+        }
+
+        if (isChecked('BBOption')) {
+            selectedFees.push('Basketball: Rs 1700 (per team)');
+        }
+
+        if (isChecked('FBOption')) {
+            selectedFees.push('Football: Rs 1700 (per team)');
+        }
+
+        if (isChecked('VBOption')) {
+            selectedFees.push('Volleyball: Rs 1700 (per team)');
+        }
+
+        if (selectedFees.length === 0) {
+            paymentTags.innerHTML = '<span class="payment-empty">Select a sport to view the fee.</span>';
+            return;
+        }
+
+        paymentTags.innerHTML = selectedFees
+            .map((feeText) => `<span class="payment-chip">${feeText}</span>`)
+            .join('');
+    };
+
+    sportCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                sportCheckboxes.forEach((otherCheckbox) => {
+                    if (otherCheckbox !== checkbox) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            }
+
+            syncCheckboxVisualState();
+            updatePaymentSummary();
+        });
+    });
+
+    coachOptions.forEach((option) => {
+        option.addEventListener('change', updateCoachFields);
+    });
+
+    attachTenDigitValidation(mobileInput);
+    attachTenDigitValidation(coachMobileInput);
+
+    syncCheckboxVisualState();
+    updatePaymentSummary();
+    updateCoachFields();
     </script>
 </body>
 </html>
