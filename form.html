@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="field">
-                        <label for="Affiliation">Affiliation (College Name)</label>
+                        <label for="Affiliation">Affiliation (College)</label>
                         <input id="Affiliation" type="text" name="Affiliation" placeholder="Enter college name" required>
                     </div>
 
@@ -62,12 +62,6 @@
                     <div class="field field-full">
                         <label for="IDCard">ID Card (Upload)</label>
                         <input id="IDCard" type="file" name="IDCard" accept="image/*,.pdf" required>
-                        <span class="file-hint">Accepted: JPG, PNG, PDF (Max 5MB)</span>
-                    </div>
-
-                    <div class="field field-full">
-                        <label for="PaymentScreenshot">Payment Screenshot (Upload)</label>
-                        <input id="PaymentScreenshot" type="file" name="PaymentScreenshot" accept="image/*,.pdf" required>
                         <span class="file-hint">Accepted: JPG, PNG, PDF (Max 5MB)</span>
                     </div>
 
@@ -139,7 +133,7 @@
                     <div class="qr-panel">
                         <h3>Scan QR to Pay</h3>
                         <img
-                            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi%3A%2F%2Fpay%3Fpa%3Dsynergydtu%40psbpay%26pn%3DSynergy%2520IGDTUW"
+                            src="img/qr.png"
                             alt="Payment QR"
                             class="payment-qr"
                             loading="lazy"
@@ -147,6 +141,12 @@
                         <p class="upi-note">UPI ID: synergydtu@psbpay</p>
                     </div>
                 </section>
+
+                <div class="field field-full payment-screenshot-field">
+                    <label for="PaymentScreenshot">Payment Screenshot (Upload)</label>
+                    <input id="PaymentScreenshot" type="file" name="PaymentScreenshot" accept="image/*,.pdf" required>
+                    <span class="file-hint">Accepted: JPG, PNG, PDF (Max 5MB)</span>
+                </div>
 
                 <button type="submit" class="submit-btn">Register Now</button>
             </form>
