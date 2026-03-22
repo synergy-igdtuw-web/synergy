@@ -34,14 +34,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <style>
-        .navbar-brand img {
-            width: 80px;
-            height: 40px;
-        }
+        /* ── Navbar ── */
+        .navbar-brand img { width: 80px; height: 40px; }
 
-        .dropdownMymenu {
-            position: relative;
-        }
+        .dropdownMymenu { position: relative; }
 
         .dropdown {
             position: absolute;
@@ -57,57 +53,21 @@
             background-color: #000;
             z-index: 1000;
         }
-
-        .dropdown li {
-            display: block;
-            margin: 0;
-            padding: 5px 10px;
-            white-space: nowrap;
-        }
-
-        .dropdown li a {
-            text-align: center;
-            color: #fff;
-            display: block;
-        }
-
+        .dropdown li { display: block; margin: 0; padding: 5px 10px; white-space: nowrap; }
+        .dropdown li a { text-align: center; color: #fff; display: block; }
         .dropdown::after {
             content: "";
             position: absolute;
-            bottom: 100%;
-            left: 30%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
+            bottom: 100%; left: 30%; margin-left: -5px;
+            border-width: 5px; border-style: solid;
             border-color: transparent transparent #000 transparent;
         }
+        .dropdownMymenu:hover .dropdown { display: block; }
 
-        .dropdownMymenu:hover .dropdown {
-            display: block;
-        }
-
-        .ignite26-note {
-            margin-top: 18px;
-            background: rgba(0, 0, 0, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 10px;
-            padding: 12px 14px;
-            color: #fff;
-            line-height: 1.6;
-            max-width: 980px;
-        }
-
-        .ignite26-note-inline {
-            margin: 0 auto 20px;
-            background: #fff7d6;
-            border: 1px solid #ffdb70;
-            color: #1f2937;
-            max-width: 1100px;
-        }
-
+        /* ── Register button ── */
         .ignite26-register {
             display: inline-block;
-            margin-top: 18px;
+            margin: 10px 6px 0;
             background: #ffcc00;
             color: #111;
             font-weight: 700;
@@ -116,130 +76,278 @@
             padding: 10px 20px;
             text-decoration: none;
             transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
         }
-
         .ignite26-register:hover {
-            color: #111;
-            background: #e6b800;
-            text-decoration: none;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+            color: #111; background: #e6b800; text-decoration: none;
+            transform: translateY(-2px); box-shadow: 0 5px 12px rgba(0,0,0,0.16);
         }
 
-        .ignite26-register:focus,
-        .ignite26-register:focus-visible {
-            outline: 3px solid rgba(255, 255, 255, 0.8);
-            outline-offset: 2px;
+        /* ── Section heading ── */
+        .ignite26-section-heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1f2937;
+            text-align: center;
+            margin: 0 0 28px;
+            letter-spacing: 0.8px;
+            font-family: 'Open Sans', sans-serif;
         }
 
-        .ignite26-register:active {
-            transform: translateY(0);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+        /* ── Notice box ── */
+        .ignite26-note-inline {
+            margin: 0 auto 24px;
+            background: #fff7d6;
+            border: 1px solid #ffdb70;
+            border-radius: 10px;
+            padding: 14px 16px;
+            color: #1f2937;
+            line-height: 1.6;
+            max-width: 860px;
+            font-size: 0.93rem;
         }
 
-        .ignite26-subheading {
-            font-weight: 700;
-            font-size: 1.4rem;
-            margin: 0 0 14px;
+        .ignite26-note-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .ignite26-note-text {
+            flex: 1;
+        }
+
+        .ignite26-note-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            min-width: 220px;
+        }
+
+        .ignite26-note-actions .ignite26-register {
+            margin: 0;
+            width: 100%;
             text-align: center;
         }
 
-        .ignite26-partition-wrap {
-            margin-top: 14px;
+        /* ── Duo cards (About + When & Where) ── */
+        .ignite26-duo-wrap {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 22px;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 820px;
+            margin: 0 auto 32px;
+            padding: 0 16px;
+            box-sizing: border-box;
         }
 
+        .ignite26-about-card,
+        .ignite26-when-where-card {
+            background: #fff;
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            padding: 22px 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .ignite26-when-where-card {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 20px;
+        }
+        .ignite26-about-card:hover,
+        .ignite26-when-where-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .ignite26-about-title,
+        .ignite26-when-where-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #ffcc00;
+            text-align: center;
+            margin: 0 0 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .ignite26-about-logo-img {
+            display: block;
+            width: 60px;
+            margin: 0 auto 12px;
+        }
+
+        .ignite26-about-text {
+            color: #4b5563;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .ignite26-about-text-left {
+            color: #4b5563;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .ignite26-about-link {
+            display: inline-block;
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-top: 6px;
+            transition: color 0.25s;
+        }
+        .ignite26-about-link:hover { color: #e6b800; text-decoration: underline; }
+
+        /* When & Where items */
+        .ignite26-when-where-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+        .ignite26-when-where-icon {
+            font-size: 1.55rem;
+            color: #ffcc00;
+            flex-shrink: 0;
+            padding-top: 2px;
+        }
+        .ignite26-when-where-label {
+            font-size: 0.96rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0 0 2px;
+        }
+        .ignite26-when-where-text {
+            font-size: 0.88rem;
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.35;
+        }
+
+        .ignite26-campus-image {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 8px 0 14px;
+            border: 1px solid #e5e7eb;
+            display: block;
+        }
+
+        .ignite26-directions-btn {
+            display: block;
+            width: fit-content;
+            margin: auto auto 0;
+            background: none;
+            border: 2px solid #ffcc00;
+            color: #ffcc00;
+            font-weight: 700;
+            border-radius: 6px;
+            padding: 7px 20px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .ignite26-directions-btn:hover { background: #ffcc00; color: #111; }
+
+        /* ── Sports partitions ── */
+        .ignite26-subheading {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 0 16px;
+            text-align: center;
+        }
+        .ignite26-partition-wrap {
+            margin-top: 12px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
         .ignite26-partition {
             border: 1px solid #dfdfdf;
             border-radius: 14px;
             overflow: hidden;
             background: #fff;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
         }
-
         .ignite26-partition-header {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             align-items: center;
-            justify-content: flex-start;
-            padding: 12px 14px;
+            padding: 10px 14px;
             border-bottom: 1px solid #ececec;
             background: linear-gradient(120deg, #fff6d6, #ffe38a);
         }
-
         .ignite26-partition-header h3 {
             margin: 0;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 800;
             color: #121212;
         }
-
         .ignite26-sport-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            padding: 12px;
+            gap: 10px;
+            padding: 10px;
         }
-
         .ignite26-sport-card {
             position: relative;
-            min-height: 180px;
-            border-radius: 12px;
+            min-height: 170px;
+            border-radius: 10px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.5);
             background-size: cover;
             background-position: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
         }
-
         .ignite26-sport-card::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.9) 85%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.35) 10%, rgba(0,0,0,0.88) 85%);
         }
-
         .ignite26-sport-content {
             position: relative;
             z-index: 1;
             height: 100%;
-            padding: 14px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             color: #fff;
         }
-
         .ignite26-sport-title {
-            margin: 0 0 10px;
-            font-size: 1.1rem;
+            margin: 0 0 8px;
+            font-size: 1rem;
             font-weight: 900;
-            line-height: 1.25;
+            line-height: 1.2;
             color: #fff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
         }
-
-        .ignite26-sport-meta {
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
+        .ignite26-sport-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 5px; }
         .ignite26-badge {
             display: inline-block;
             border-radius: 999px;
-            padding: 4px 10px;
-            font-size: 0.74rem;
+            padding: 3px 9px;
+            font-size: 0.72rem;
             font-weight: 700;
-            background: rgba(255, 204, 0, 0.95);
+            background: rgba(255,204,0,0.95);
             color: #111;
         }
 
+        /* ── Alert ── */
         .ignite26-alert {
             background: #fff7d6;
             border-left: 5px solid #ffcc00;
@@ -247,104 +355,118 @@
             padding: 12px 14px;
             line-height: 1.7;
             margin-top: 10px;
+            font-size: 0.92rem;
         }
 
+        /* ── Schedule ── */
+        .schedule-heading {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #6b7280;
+            padding: 20px 0;
+        }
+
+        /* ── Slideshow Hero ── */
+        .hero-slideshow {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-slideshow .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+            z-index: 0;
+        }
+
+        .hero-slideshow .slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .hero-slideshow .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-slideshow .hero-content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .hero-slideshow .hero-content h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .hero-slideshow .hero-content .breadcrumbs {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        .hero-slideshow .hero-content .breadcrumbs a {
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .ignite26-subheading {
-                font-size: 1.15rem;
-            }
-
-            .ignite26-partition-wrap {
+            .ignite26-duo-wrap {
+                grid-template-columns: 1fr;
                 gap: 16px;
+                padding: 0 12px;
             }
 
-            .ignite26-sport-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-                padding: 10px;
+            .ignite26-note-row {
+                flex-direction: column;
+                align-items: stretch;
             }
 
-            .ignite26-sport-card {
-                min-height: 165px;
+            .ignite26-note-actions {
+                width: 100%;
+                min-width: 0;
+                align-items: stretch;
             }
 
-            .ignite26-sport-title {
-                font-size: 1rem;
-            }
-
-            .ignite26-badge {
-                font-size: 0.7rem;
-                padding: 4px 8px;
-            }
-
-            .details-container {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
+            .ignite26-sport-grid { grid-template-columns: 1fr; }
+            .ignite26-sport-card { min-height: 150px; }
+            .hero-slideshow .hero-content h1 { font-size: 2rem; }
         }
 
         @media only screen and (max-width: 992px) {
-            #thehero .the-inner {
-                min-height: auto !important;
-                padding: 100px 0 38px;
-            }
-
-            #thehero .container {
-                padding-left: 14px;
-                padding-right: 14px;
-            }
-
-            .ignite24 {
-                font-size: 0.98rem;
-                line-height: 1.65;
-            }
-
-            .ignite26-note {
-                margin-top: 14px;
-                padding: 10px 12px;
-                font-size: 0.92rem;
-                max-width: 100%;
-            }
-
-            .about .about-section,
-            .about .about_us {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
             .dropdown {
                 display: block;
                 position: initial;
                 transform: none;
                 background-color: orange;
-                padding: 0;
-                margin: 0;
-                min-width: 0;
+                padding: 0; margin: 0; min-width: 0;
             }
-
-            .dropdown::after {
-                display: none;
-            }
-
-            .dropdown li {
-                padding: 5px;
-            }
-
-            .dropdown li a {
-                color: #000;
-                text-align: center;
-            }
-
-            .navbar-brand {
-                padding: 0 5px;
-            }
-
-            .navbar-brand img {
-                width: 60px;
-                height: 30px;
-            }
+            .dropdown::after { display: none; }
+            .dropdown li { padding: 5px; }
+            .dropdown li a { color: #000; text-align: center; }
+            .navbar-brand { padding: 0 5px; }
+            .navbar-brand img { width: 60px; height: 30px; }
         }
+
+        #footer { padding: 0; text-align: left; }
     </style>
 </head>
 
@@ -352,8 +474,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html"><span><img src="img/FooterLogo.png" alt=""></span></a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
@@ -386,199 +508,216 @@
         </div>
     </nav>
 
-    <section id="thehero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.52)), url('synbg.jpg');">
-        <div class="the-inner" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
-            <div class="container" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <div>
-                    <h1>IGNITE-26</h1>
-                </div>
-                <div>
-                    <h6 class="ignite24">
-                        IGNITE 2026 is the annual celebration of sportsmanship, strength, teamwork, and discipline at IGDTUW. Teams from colleges across India will compete in track events, indoor games, and team sports. The event focuses on fair competition, smooth coordination, and high-energy participation.
-                    </h6>
-                </div>
+    <!-- ── Slideshow Hero ── -->
+    <!--
+        INSTRUCTIONS: Replace the background-image URLs below with your actual photos.
+        Each slide = one photo. Add or remove <div class="slide"> blocks as needed.
+        Recommended: 4–6 landscape photos, at least 1920×1080px.
+        Current placeholders: hero-slide-1.jpg, hero-slide-2.jpg, hero-slide-3.jpg, hero-slide-4.jpg
+    -->
+    <section class="hero-slideshow">
+        <div class="slide active" style="background-image: url('img/basketball-bg.jpg');"></div>
+        <div class="slide"        style="background-image: url('img/football-bg.jpg');"></div>
+        <div class="slide"        style="background-image: url('img/track-bg.jpg');"></div>
+        <div class="slide"        style="background-image: url('img/volleyball-bg.jpg');"></div>
 
-                <a href="form.html" class="ignite26-register">Registration Form</a>
-                <a href="lookup.php" class="ignite26-register">Find Receipt</a>
+        <div class="overlay"></div>
 
-            </div>
+        <div class="hero-content">
+            <h1 class="mb-3 bread">IGNITE 2026</h1>
+            <p class="breadcrumbs">
+                <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span>
+                <span>Ignite'26 <i class="ion-ios-arrow-forward"></i></span>
+            </p>
         </div>
+
     </section>
 
     <br>
+
+    <!-- Notice -->
     <div class="container">
-        <div class="ignite26-note ignite26-note-inline">
-            Registration Deadline: <b>28 March 2026</b>. Complete your registration within this period and enter all details correctly. The submitted information will be used for official coordination, event communication, and match scheduling.
-            <br><br>
-            The payment QR section is available directly on the registration form before submission.
+        <div class="ignite26-note-inline">
+            <div class="ignite26-note-row">
+                <div class="ignite26-note-text">
+                    Registration Deadline: <b>28 March 2026</b>. Complete your registration within this period and enter all
+                    details correctly. The submitted information will be used for official coordination, event communication,
+                    and match scheduling.
+                    <br><br>
+                    In case of missed receipt, use 'find receipt' to get a copy using enrollment no. or UID
+                </div>
+                <div class="ignite26-note-actions">
+                    <a href="form.html" class="ignite26-register">Registration Form</a>
+                    <a href="lookup.php" class="ignite26-register">Find Receipt</a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Join Us section -->
     <div class="about">
         <div class="about-section">
             <div class="about_us">
-                <div class="about-heading">
-                    <h2 class="animate__animated wow wow animate__backInLeft">WHEN / WHERE</h2>
-                </div>
-                <div class="details-container">
-                    <div class="details-col when">
-                        <i class="details-icon fa-regular fa-calendar-days"></i>
-                        <div class="when-heading animate__animated wow wow animate__backInLeft">WHEN</div>
-                        <div class="when-details">Date: 29-30 March 2026</div>
+                <h2 class="ignite26-section-heading">JOIN US AT IGNITE 2026</h2>
+
+                <div class="ignite26-duo-wrap">
+                    <!-- About card -->
+                    <div class="ignite26-about-card">
+                        <h3 class="ignite26-about-title">ABOUT IGNITE 2026</h3>
+                        <img src="img/FooterLogo.png" alt="Synergy Logo" class="ignite26-about-logo-img">
+                        <p class="ignite26-about-text"><em>"Sports teach us resilience, discipline, and unity; values that extend far beyond the field."</em></p>
+                        <p class="ignite26-about-text-left">After the remarkable success of its previous editions, IGNITE 2026 marks yet another chapter in the legacy of IGDTUW's Annual Sports Fest. Organized by Synergy, the official sports club, this two-day sporting celebration brings together talented athletes from across colleges. We are honored to welcome Sonia Chahal (an accomplished Indian boxer and international medalist) as our esteemed guest. With the continued guidance of Dr. Dinesh Ganotra, IGNITE 2026 promises passion, sportsmanship, and unforgettable moments.</p>
                     </div>
-                    <div class="details-col where">
-                        <i class="details-icon fa-solid fa-location-dot"></i>
-                        <div class="where-heading animate__animated wow wow animate__backInRight">WHERE</div>
-                        <div class="where-details">Venue: IGDTUW Campus</div>
+
+                    <!-- When & Where card -->
+                    <div class="ignite26-when-where-card">
+                        <h3 class="ignite26-when-where-title">WHEN &amp; WHERE</h3>
+
+                        <div class="ignite26-when-where-item">
+                            <i class="ignite26-when-where-icon fa-solid fa-calendar"></i>
+                            <div>
+                                <div class="ignite26-when-where-label">29–30 MARCH 2026</div>
+                                <div class="ignite26-when-where-text">Event Days</div>
+                            </div>
+                        </div>
+
+                        <div class="ignite26-when-where-item">
+                            <i class="ignite26-when-where-icon fa-solid fa-location-dot"></i>
+                            <div>
+                                <div class="ignite26-when-where-label">IGDTUW CAMPUS</div>
+                                <div class="ignite26-when-where-text">Kashmere Gate, Delhi</div>
+                            </div>
+                        </div>
+
+                        <img src="img/igdtuw-campus.jpg" alt="IGDTUW Campus" class="ignite26-campus-image">
+                        <a href="https://maps.google.com/maps?q=IGDTUW+Delhi" target="_blank" class="ignite26-directions-btn">Get Directions</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Events -->
     <div class="about">
         <div class="about-section">
             <div class="about_us">
                 <div class="about-heading">
-                    <h2 class="animate__animated wow wow animate__backInLeft">EVENTS</h2>
+                    <h2 class="animate__animated wow animate__backInLeft">EVENTS</h2>
                 </div>
                 <p class="ignite26-subheading">Sports Available in Ignite 2026</p>
                 <div class="ignite26-partition-wrap">
+
                     <section class="ignite26-partition">
-                        <div class="ignite26-partition-header">
-                            <h3>Individual Sports</h3>
-                        </div>
+                        <div class="ignite26-partition-header"><h3>Individual Sports</h3></div>
                         <div class="ignite26-sport-grid">
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/athletics.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">100m Sprint</h4>
-                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/athletics.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">200m Sprint</h4>
-                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/athletics.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">400m Sprint</h4>
-                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/athletics.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Shot Put</h4>
-                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Price: Rs 120 (per person)</span></p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/chess.webp');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/chess.webp');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Chess</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 120 (per person)</span>
-                                    </p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/athletics.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/athletics.jpg');">
                                 <div class="ignite26-sport-content">
-                                    <h4 class="ignite26-sport-title">Relay 4 x 100m</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 120 (per person)</span>
-                                    </p>
+                                    <h4 class="ignite26-sport-title">Relay 4×100m</h4>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 120 / person</span></p>
                                 </div>
                             </article>
                         </div>
                     </section>
 
                     <section class="ignite26-partition">
-                        <div class="ignite26-partition-header">
-                            <h3>Team Sports</h3>
-                        </div>
+                        <div class="ignite26-partition-header"><h3>Team Sports</h3></div>
                         <div class="ignite26-sport-grid">
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/basketball.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/basketball.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Basketball</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
-                                    </p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 1700 / team</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/volleyball.jpeg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/volleyball.jpeg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Volleyball</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
-                                    </p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 1700 / team</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/khoho.jpeg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/khoho.jpeg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Kho Kho</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
-                                    </p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 1700 / team</span></p>
                                 </div>
                             </article>
-
-                            <article class="ignite26-sport-card" style="background-image: url('img/ignite-24/football.jpg');">
+                            <article class="ignite26-sport-card" style="background-image:url('img/ignite-24/football.jpg');">
                                 <div class="ignite26-sport-content">
                                     <h4 class="ignite26-sport-title">Football</h4>
-                                    <p class="ignite26-sport-meta">
-                                        <span class="ignite26-badge">Price: Rs 1700 (per team)</span>
-                                    </p>
+                                    <p class="ignite26-sport-meta"><span class="ignite26-badge">Rs 1700 / team</span></p>
                                 </div>
                             </article>
                         </div>
                     </section>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Registration Notice -->
     <div class="about">
         <div class="about-section">
             <div class="about_us">
                 <div class="about-heading">
-                    <h2 class="animate__animated wow wow animate__backInLeft">REGISTRATION NOTICE</h2>
+                    <h2 class="animate__animated wow animate__backInLeft">REGISTRATION NOTICE</h2>
                 </div>
                 <div class="ignite26-alert">
-                    Please fill out the registration form in time and provide correct participant details. Incorrect phone number, email, enrollment number, affiliation, event selection, or ID proof can cause registration mismatch and coordination delays.
+                    Please fill out the registration form in time and provide correct participant details.
+                    Incorrect phone number, email, enrollment number, affiliation, event selection, or ID proof
+                    can cause registration mismatch and coordination delays.
                     <br><br>
                     Payment QR information is available directly on the registration form before submission.
                     <br><br>
-                    Use these buttons: <a href="form.html" class="ignite26-register" style="margin-top: 8px;">Open Registration Form</a>
-                    <a href="lookup.php" class="ignite26-register" style="margin-top: 8px;">Find Receipt</a>
+                    <a href="form.html"  class="ignite26-register" style="margin-top:8px;">Open Registration Form</a>
+                    <a href="lookup.php" class="ignite26-register" style="margin-top:8px;">Find Receipt</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Schedule -->
     <div class="about">
         <div class="about-section">
             <div class="about_us">
                 <div class="about-heading">
-                    <h2 class="animate__animated wow wow animate__backInLeft">EVENT SCHEDULE</h2>
+                    <h2 class="animate__animated wow animate__backInLeft">EVENT SCHEDULE</h2>
                 </div>
                 <div class="schedule-heading">COMING SOON</div>
             </div>
         </div>
     </div>
 
-    <style>
-        #footer {
-            padding: 0px;
-            text-align: left;
-        }
-    </style>
+    <!-- Footer -->
     <footer class="ftco-footer ftco-footer-2 ftco-section" id="footer">
         <div class="container">
             <div class="row mb-1">
@@ -587,7 +726,7 @@
                         <h2 class="ftco-heading-2">Synergy</h2>
                         <p class="text">The Sports Society of Indira Gandhi Delhi Technical University For Women</p>
                         <ul class="list-unstyled">
-                            <li><a href="mailto: synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp synergy@igdtuw.ac.in</span></a></li>
+                            <li><a href="mailto:synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp;synergy@igdtuw.ac.in</span></a></li>
                         </ul>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
                             <li class="ftco-animate"><a href="https://www.linkedin.com/company/synergy-sports-society-of-igdtuw/"><span class="icon-linkedin"></span></a></li>
@@ -603,11 +742,9 @@
                         <h2 class="ftco-heading-2">Contact</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <li><a><span class="icon icon-map-marker"></span><span class="text"> Madrasa Road
-                                    Opposite St. James Church
-                                    Kashmere Gate
-                                    Delhi-110006</span></a></li>
-                                <li><a><span class="icon icon-phone"></span><span class="text">Pranchal (President)</span></a>
+                                <li><a><span class="icon icon-map-marker"></span><span class="text"> Madrasa Road, Opposite St. James Church, Kashmere Gate, Delhi-110006</span></a></li>
+                                <li>
+                                    <a><span class="icon icon-phone"></span><span class="text">Pranchal (President)</span></a>
                                     <a><span class="icon icon-phone"></span><span class="text">Gunjan Ruhal (General Secretary)</span></a>
                                     <a><span class="icon icon-phone"></span><span class="text">Dodda Sai Manisri (Treasurer)</span></a>
                                     <a><span class="icon icon-phone"></span><span class="text">Himani Varshney (Joint General Secretary)</span></a>
@@ -620,18 +757,16 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p>
-                        Maintained by <a href="https://www.linkedin.com/in/aviral-kakodia-054642341/" target="_blank">Aviral Kakodia (BTECH, IGDTUW)</a> and <a href="https://www.linkedin.com/in/bhavya-sinha-532676287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Bhavya Sinha (BTECH, IGDTUW)</a> - Web-D Core of Synergy
-                        <br> Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> All rights reserved.
+                        Maintained by <a href="https://www.linkedin.com/in/aviral-kakodia-054642341/" target="_blank">Aviral Kakodia (BTECH, IGDTUW)</a> and
+                        <a href="https://www.linkedin.com/in/bhavya-sinha-532676287" target="_blank">Bhavya Sinha (BTECH, IGDTUW)</a> - Web-D Core of Synergy
+                        <br>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.
                     </p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -646,10 +781,39 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
     <script src="ignite24.js"></script>
+
+    <!-- Slideshow Script -->
+    <script>
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('.hero-slideshow .slide');
+        var autoplayInterval;
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 2000); // change every 2 seconds
+        }
+
+        // Pause on hover, resume on leave
+        document.querySelector('.hero-slideshow').addEventListener('mouseenter', function() {
+            clearInterval(autoplayInterval);
+        });
+        document.querySelector('.hero-slideshow').addEventListener('mouseleave', function() {
+            startAutoplay();
+        });
+
+        startAutoplay();
+    </script>
 </body>
 
 </html>
