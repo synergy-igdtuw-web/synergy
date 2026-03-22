@@ -115,12 +115,27 @@
             border-radius: 8px;
             padding: 10px 20px;
             text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
 
         .ignite26-register:hover {
             color: #111;
             background: #e6b800;
             text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        .ignite26-register:focus,
+        .ignite26-register:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.8);
+            outline-offset: 2px;
+        }
+
+        .ignite26-register:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
         }
 
         .ignite26-subheading {

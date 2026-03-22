@@ -151,7 +151,6 @@
         .sponsors {
             text-align: center;
             font-size: 20px;
-            /* text-transform: uppercase; */
             font-weight: bold;
             text-shadow: 1px 1px 1px #222;
             animation: text 3s 1;
@@ -173,9 +172,7 @@
             width: 250px;
             height: 100px;
             perspective: 1000px;
-            /* Remove this if you don't want the 3D effect */
         }
-        /* This container is needed to position the front and back side */
         
         .flip-box-inner {
             position: relative;
@@ -185,7 +182,6 @@
             transition: transform 0.8s;
             transform-style: preserve-3d;
         }
-        /* Position the front and back side */
         
         .flip-box-front,
         .flip-box-back {
@@ -193,10 +189,8 @@
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden;
-            /* Safari */
             backface-visibility: hidden;
         }
-        /* Style the front side */
         
         .flip-box-front {
             background-color: black;
@@ -209,46 +203,16 @@
             padding-top: 15px;
             padding-bottom: 10px;
         }
-        /* Do an horizontal flip when you move the mouse over the flip box container */
         
         .flip-box:hover .flip-box-inner {
             transform: rotateX(180deg);
         }
-        /* Style the back side */
         
         .flip-box-back {
             background-color: orange;
             color: white;
             transform: rotateX(180deg);
         }
-        /* .heading {
-            font-size: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px #222;
-            animation: text 3s 1;
-            color: black;
-            display: block;
-            margin: auto;
-        }
-        
-        .myimg {
-            width: 100%;
-            max-width: 620px;
-            height: auto;
-            margin: 8px;
-        }
-         */
-        /* .glow {
-            font-size: 20px;
-            color: black;
-            text-align: center;
-            -webkit-animation: glow 1s ease-in-out infinite alternate;
-            -moz-animation: glow 1s ease-in-out infinite alternate;
-            animation: glow 1s ease-in-out infinite alternate;
-            background: orange;
-        } */
         
         .sidenav {
             height: 100vh;
@@ -468,75 +432,135 @@
 
 <!-- Main Content start -->
 
-<style>
-    .marqueeBox{
-        position:absolute;
-        top:17%;
-       
-    }
-    .marqueeUl{
-        display: inline;
-        list-style: none;
-
-    }
-    .marqueeUl li{
-        cursor: pointer;
-        display: inline;
-        padding: 5px 10px;
-    }
-</style>
-
-<marquee class="marqueeBox" onMouseOver="this.stop()" onMouseOut="this.start()" behaviour="slide" >
-    <ul class="marqueeUl">
-        <li> <span style="font-weight: bolder;color:orange;font-size: 1.5em;font-family: Work Sans;"> Our Sponsors </span></li>
-        <li><img src="img/Sponsors/probo.jpeg" height="80px"></li>
-        <li><img src="img/Sponsors/unibic.jpeg"  height="80px"></li>
-        <li><img src="img/Sponsors/carer launcher.jpeg"  height="80px"></li>
-        <li><img src="img/Sponsors/cornito.png"  height="80px" ></li>
-        <li><img src="img/Sponsors/du beat.jpeg"  height="80px"></li>
-        <li><img src="img/Sponsors/ed times.webp"  height="80px"></li>
-        <li><img src="img/Sponsors/enerzal.webp"  height="80px"></li>
-        <li><img src="img/Sponsors/fisto.webp"  height="80px"></li>
-        <li><img src="img/Sponsors/grabon.png"  height="80px"></li>
-        <li><img src="img/Sponsors/insightone.png"  height="80px"></li>
-        <li><img src="img/Sponsors/jhaji.webp"  height="80px"></li>
-        <li><img src="img/Sponsors/nature's island.png"  height="80px"></li>
-        <li><img src="img/Sponsors/nutriquo.png"  height="80px"></li>
-        <li><img src="img/Sponsors/playo.png"  height="80px"></li>
-        <li><img src="img/Sponsors/rabbit.png"  height="80px"></li>
-        <li><img src="img/Sponsors/rackonnect.png"  height="80px"></li>
-
-        
-            
-    </ul>
-</marquee>
+    <!-- ============================================================
+         HERO SECTION
+         - <img> tag: no background tricks, no black gaps anywhere
+         - margin-top: 56px clears the fixed navbar on desktop
+         - On mobile the navbar becomes static so margin-top drops to 0
+         - width:100% + height:auto scales perfectly on every screen
+         - Marquee (sponsors ticker) and SYNERGY/subtitle text
+           remain commented out as requested
+    ============================================================ -->
     <style>
-        .homeHeading {
-            font-size: 4.5rem;
-            font-weight:bold;
-            font-family: "Work Sans";
+        .hero-img-wrapper {
+            margin-top: 76px;
+            line-height: 0;
+            position: relative;
         }
-        .overlayDiv{
-            /* opacity: .9; */
-            background-color:#1a020250;
-            width: 100%;
+
+        .register-now-btn {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd24d 0%, #ffb100 45%, #ff8a00 100%);
+            color: #1f1200;
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            font-size: clamp(12px, 1.15vw, 20px);
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            white-space: nowrap;
+            padding: clamp(10px, 0.9vw, 16px) clamp(24px, 2.6vw, 44px);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 999px;
+            box-shadow: 0 10px 28px rgba(255, 130, 0, 0.42), 0 0 0 0 rgba(255, 180, 0, 0.38);
+            overflow: hidden;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+            animation: registerPulse 2.4s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        .register-now-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -130%;
+            width: 65%;
             height: 100%;
+            background: linear-gradient(110deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0));
+            transform: skewX(-22deg);
+            transition: left 0.55s ease;
         }
-    </style>       
-    <div class="hero-wrap js-fullheight" style="background-image: url('img/background/4.JPG');" data-stellar-background-ratio="0.5">
-    	 
-        <div class="overlayDiv js-fullheight">
-            <div class="container">
-                <div class="row no-gutters slider-text js-fullheight align-items-center " data-scrollax-parent="true">
-                    <div class="col-md-12 ftco-animate mt-5 text-center" data-scrollax=" properties: { translateY: '70%' }">
-                        <h1 class="mb-4 homeHeading" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">SYNERGY</h1>
-                        <p class="mb-4" style=" font-weight:bold;display: inline;padding: 2px;background-color: black transparent;margin-top: 200px;color: white;font-size: 1.8rem;font-family: work Sans;" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><b>Sports Society<br> Indira Gandhi Technical University For Women</b></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+
+        .register-now-btn:hover {
+            color: #1a0f00;
+            transform: translate(-50%, -50%) translateY(-3px) scale(1.03);
+            box-shadow: 0 16px 32px rgba(255, 127, 0, 0.5), 0 0 0 9px rgba(255, 183, 0, 0.18);
+            filter: saturate(1.08);
+            animation-play-state: paused;
+        }
+
+        .register-now-btn:hover::before {
+            left: 150%;
+        }
+
+        @keyframes registerPulse {
+            0%,
+            100% {
+                box-shadow: 0 10px 28px rgba(255, 130, 0, 0.42), 0 0 0 0 rgba(255, 180, 0, 0.38);
+            }
+            50% {
+                box-shadow: 0 14px 32px rgba(255, 115, 0, 0.5), 0 0 0 10px rgba(255, 180, 0, 0);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-img-wrapper {
+                margin-top: 0;
+            }
+
+            .register-now-btn {
+                top: 82%;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .register-now-btn {
+                font-size: 24px;
+                padding: 18px 56px;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+
+    <div class="hero-img-wrapper">
+        <img src="img/ignite26.jpeg"
+             alt="Ignite 26 Sports Fest"
+             style="width: 100%; height: auto; display: block;">
+        <!-- Register Now button — positioned below "Are you ready?" text -->
+        <a href="form.html" class="register-now-btn">
+            Register Now
+        </a>
     </div>
+    <!-- END hero section -->
+
+    <!--
+    COMMENTED OUT: Sponsors marquee ticker + SYNERGY heading + Sports Society subtitle
+
+    <marquee onMouseOver="this.stop()" onMouseOut="this.start()" behaviour="slide">
+        <ul style="display:inline;list-style:none;">
+            <li style="display:inline;padding:5px 10px;">
+                <span style="font-weight:bolder;color:orange;font-size:1.5em;">Our Sponsors</span>
+            </li>
+            <li style="display:inline;"><img src="img/Sponsors/probo.jpeg" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/unibic.jpeg" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/carer launcher.jpeg" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/cornito.png" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/du beat.jpeg" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/enerzal.webp" height="80px"></li>
+            <li style="display:inline;"><img src="img/Sponsors/rackonnect.png" height="80px"></li>
+        </ul>
+    </marquee>
+
+    <h1 style="font-size:4.5rem;font-weight:bold;">SYNERGY</h1>
+    <p style="font-weight:bold;color:white;font-size:1.8rem;">
+        Sports Society<br>Indira Gandhi Technical University For Women
+    </p>
+    -->
 
     <style>
         .game-schedule-d .sport-team-sp-d img {
@@ -563,7 +587,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Title <br> Sponsor</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -575,13 +598,12 @@
                                 <div class="pl-4 desc">
                                     <span class="venue font-weight-bold">Unibic Cookies</span>
                                     <h4 class="team-name">
-                                        <a target="_blank">Dessert <br> Partner</a> </h4>
-                                    <!-- <span class="date">21 Aug to 27 Aug 2020</span> -->
+                                        <a target="_blank">Dessert <br> Partner</a>
+                                    </h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="item">
                         <div class="game-schedule">
                             <div class="sport-team d-flex align-items-center">
@@ -589,7 +611,6 @@
                                 <div class="pl-4 desc">
                                     <span class="venue font-weight-bold">Career Launcher</span>
                                     <h4 class="team-name"><a>Parnter</a></h4>
-                                    <!-- <span class="date">24 Sep to 27 Sep 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -601,7 +622,6 @@
                                 <div class="pl-4 desc">
                                     <span class="venue font-weight-bold">Cornitos</span>
                                     <h4 class="team-name"><a>Snacks<br> Partner</a></h4>
-                                    <!-- <span class="date">24 Sep to 27 Sep 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -613,7 +633,6 @@
                                 <div class="pl-4 desc">
                                     <span class="venue font-weight-bold">Du Beats</span>
                                     <h4 class="team-name"><a>Media <br> Parnter</a></h4>
-                                    <!-- <span class="date">24 Sep to 27 Sep 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -627,7 +646,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Social-Media <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -641,7 +659,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Energy Drink <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -655,7 +672,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Promotional <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -669,7 +685,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Savings <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -683,7 +698,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank"> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -697,7 +711,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Associate <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -711,7 +724,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Event <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -725,7 +737,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Nutrition <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -739,7 +750,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank"> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -753,7 +763,6 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Merchandise <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
@@ -767,102 +776,13 @@
                                     <h4 class="team-name">
                                         <a target="_blank">Badminton event <br> Partner</a>
                                     </h4>
-                                    <!-- <span class="date">2 Aug - 15 Aug 2020</span> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
-
         </div>
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-md-12 heading-section ftco-animate mb-4">
-                    <h2 class="text-center mb-4 mt-4">Our Sponsors</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12 carousel-game-schedule owl-carousel">
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/1.jpg">
-                                <div class="pl-4 desc ">
-                                    <h5 class="team-name"> Construction <br> Partner</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/3.jpg" width="30" height="30" alt="">
-                                <div class="pl-4 desc ">
-
-                                    <h5 class="team-name">Knowledge <br> Partner</h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/4.jpg" width="40" height="40" alt="">
-                                <div class="pl-4 desc ">
-
-                                    <h5 class="team-name">Knowledge <br> Partner</h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/5.jpg" width="40" height="40" alt="">
-                                <div class="pl-4 desc ">
-
-                                    <h5 class="team-name">Online Media <br> Partner</h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/1.jpg" width="10" height="10" alt="">
-                                <div class="pl-4 desc ">
-
-                                    <h5 class="team-name">Construction <br> Partner</h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="game-schedule">
-                            <div class="sport-team d-flex align-items-center">
-                                <img src="img/Sponsors/4.jpg" width="10" height="10" alt="">
-                                <div class="pl-4 desc ">
-
-                                    <h5 class="team-name">Entry <br> Partner</h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div> -->
     </section>
 
 
@@ -885,7 +805,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -897,18 +816,14 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                    <!-- <span class="subheading">Testimonial</span>
-                    <h2 class="mb-4">Happy Viewers</h2> -->
                 </div>
             </div>
-
         </div>
     </section>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
         <div class="container">
             <div class="row d-flex">
-
                 <div class="col-md-6 pl-lg-5 py-5">
                     <div class="row justify-content-start pb-3">
                         <div class="col-md-12 heading-section ftco-animate">
@@ -918,24 +833,21 @@
                                 need to pursue sports and overcome the hesitation and stigma that is often associated with female participation in sports.</p>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div class="img d-flex align-self-stretch  mb-4 mt-4" style="background-image:url(img/redLogo.png);"></div>
+                    <div class="img d-flex align-self-stretch mb-4 mt-4" style="background-image:url(img/redLogo.png);"></div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="ftco-section testimony-section" style="background-image: url(img/Gallery/11.JPG);" data-stellar-background-ratio="0.2">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                    <!-- <span class="subheading">Testimonial</span>
-                    <h2 class="mb-4">Happy Viewers</h2> -->
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -978,7 +890,7 @@
                     <div class="SportsFamilyname">OLYMPIANS</div>
                 </div>
                 <div class="col-sm-4 mt-2 mb-4">
-                    <img class="SportsFamilyImg" src="img/sportsfamily/7.JPG" alt=""  style="border: 4px solid #555">
+                    <img class="SportsFamilyImg" src="img/sportsfamily/7.JPG" alt="" style="border: 4px solid #555">
                     <div class="SportsFamilyteam">Basketball Team</div>
                     <div class="SportsFamilyname">THE VALKYRIES</div>
                 </div>
@@ -991,7 +903,6 @@
                     <img class="SportsFamilyImg" src="img/sportsfamily/9.jpg" alt="" width="300px" style="border: 4px solid #555">
                     <div class="SportsFamilyteam">Volleyball Team</div>
                     <div class="SportsFamilyname">SLYTHERINS</div>
-                    <div></div>
                 </div>
                 <div class="col-sm-4 mt-2 mb-4">
                     <img class="SportsFamilyImg" src="img/sportsfamily/10.JPG" alt="" width="300px" style="border: 4px solid #555">
@@ -1019,14 +930,10 @@
                     <div class="SportsFamilyname"></div>
                 </div>
             </div>
-            
         </div>
     </section>
+
     <style>
-        /* .game-schedule .sport-team {
-            padding: 0px;
-        } */
-        
         .game-schedule .sport-team img {
             height: 250px;
         }
@@ -1179,18 +1086,15 @@
                         <h2 class="ftco-heading-2">Synergy</h2>
                         <p class="text">The Sports Society of Indira Gandhi Delhi Technical University For Women</p>
                         <ul class="list-unstyled">
-                            <li><a href="mailto: synergy@igdtuw.ac.in"><span class="icon icon-envelope">&nbsp synergy@igdtuw.ac.in</span></a></li>
+                            <li><a href="/cdn-cgi/l/email-protection#3515464c5b5047524c755c52514140421b54561b5c5b"><span class="icon icon-envelope">&nbsp <span class="__cf_email__" data-cfemail="2a5953444f584d536a434d4e5e5f5d044b49044344">[email&#160;protected]</span></span></a></li>
                         </ul>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
                             <li class="ftco-animate"><a href="https://www.linkedin.com/company/synergy-sports-society-of-igdtuw/"><span class="icon-linkedin"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.facebook.com/igdtuwsportsclub"><span class="icon-facebook"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.instagram.com/synergy_igdtuw/"><span class="icon-instagram"></span></a></li>
                             <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC1BZemcKB4j9mbwSmHNkoew"><span class="icon-youtube"></span></a></li>
-
                         </ul>
                         <br>
-
-
                     </div>
                 </div>
                 <div class="col-md">
@@ -1202,13 +1106,11 @@
 									Opposite St. James Church
 									Kashmere Gate
 									Delhi-110006</span></a></li>
-                                    <li><a><span class="icon icon-phone"></span><span class="text">Pranchal (President)</span></a>
-
-                                        <a><span class="icon icon-phone"></span><span class="text">Gunjan Ruhal (General Secretary)</span></a>
-    
-                                        <a><span class="icon icon-phone"></span><span class="text">Dodda Sai Manisri (Treasurer)</span></a>
-</li>
-
+                                <li>
+                                    <a><span class="icon icon-phone"></span><span class="text">Pranchal (President)</span></a>
+                                    <a><span class="icon icon-phone"></span><span class="text">Gunjan Ruhal (General Secretary)</span></a>
+                                    <a><span class="icon icon-phone"></span><span class="text">Dodda Sai Manisri (Treasurer)</span></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1219,9 +1121,10 @@
                     <p>
                         Maintained by <a href="https://www.linkedin.com/in/aviral-kakodia-054642341/" target="_blank">Aviral Kakodia (BTECH, IGDTUW)</a> <a href="https://www.linkedin.com/in/bhavya-sinha-532676287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">and Bhavya Sinha (BTECH, IGDTUW)</a> Web-D Core of Synergy 
                         <br> Copyright &copy;
-                        <script>
+                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved.</p>
+                        </script> All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>
