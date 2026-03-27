@@ -443,7 +443,7 @@
     ============================================================ -->
     <style>
         .hero-img-wrapper {
-            margin-top: 76px;
+            margin-top: 0;
             line-height: 0;
             position: relative;
         }
@@ -527,7 +527,127 @@
         }
     </style>
 
-    <div class="hero-img-wrapper">
+    <!-- PSB Logo Marquee Banner -->
+    <style>
+        .psb-marquee-wrapper {
+            width: 100%;
+            background: #006400;
+            overflow: hidden;
+            padding: 10px 0;
+            margin-top: 76px;
+            position: relative;
+            border-top: 3px solid #FFD700;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        @media (max-width: 991.98px) {
+            .psb-marquee-wrapper {
+                margin-top: 0;
+            }
+        }
+
+        .psb-marquee-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            animation: psbScroll 18s linear infinite;
+        }
+
+        .psb-marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .psb-marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 0 60px;
+            white-space: nowrap;
+        }
+
+        .psb-marquee-item img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .psb-marquee-item:hover img {
+            transform: scale(1.07);
+        }
+
+        .psb-sponsor-label {
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: #FFD700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .psb-sponsor-sublabel {
+            font-size: 12px;
+            color: #fffbe6;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        .psb-divider {
+            color: #FFD700;
+            font-size: 22px;
+            opacity: 0.6;
+            margin: 0 20px;
+        }
+
+        @keyframes psbScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+
+    <div class="psb-marquee-wrapper">
+        <div class="psb-marquee-track">
+            <!-- Repeated twice for seamless loop -->
+            <div class="psb-marquee-item">
+                <img src="psb-logo.png" alt="Punjab & Sind Bank Logo">
+                <div>
+                    <span class="psb-sponsor-label">Punjab &amp; Sind Bank</span>
+                    <span class="psb-sponsor-sublabel">Title Sponsor — Ignite '26</span>
+                </div>
+            </div>
+            <span class="psb-divider">✦</span>
+            <div class="psb-marquee-item">
+                <img src="psb-logo.png" alt="Punjab & Sind Bank Logo">
+                <div>
+                    <span class="psb-sponsor-label">A Govt. of India Undertaking</span>
+                    <span class="psb-sponsor-sublabel">Where service is a way of life</span>
+                </div>
+            </div>
+            <span class="psb-divider">✦</span>
+            <div class="psb-marquee-item">
+                <img src="psb-logo.png" alt="Punjab & Sind Bank Logo">
+                <div>
+                    <span class="psb-sponsor-label">Punjab &amp; Sind Bank</span>
+                    <span class="psb-sponsor-sublabel">Title Sponsor — Ignite '26</span>
+                </div>
+            </div>
+            <span class="psb-divider">✦</span>
+            <div class="psb-marquee-item">
+                <img src="psb-logo.png" alt="Punjab & Sind Bank Logo">
+                <div>
+                    <span class="psb-sponsor-label">A Govt. of India Undertaking</span>
+                    <span class="psb-sponsor-sublabel">Where service is a way of life</span>
+                </div>
+            </div>
+            <span class="psb-divider">✦</span>
+        </div>
+    </div>
+    <!-- END PSB Logo Marquee Banner -->
+
+    <div class="hero-img-wrapper" style="margin-top: 0;">
         <img src="img/ignite26.jpeg"
              alt="Ignite 26 Sports Fest"
              style="width: 100%; height: auto; display: block;">
