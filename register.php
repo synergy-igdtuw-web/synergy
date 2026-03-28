@@ -57,6 +57,13 @@ function renderErrorPage($message)
     exit;
 }
 
+// Deadline checkk
+$now = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+$deadline = new DateTime('today 21:00', new DateTimeZone('Asia/Kolkata'));
+if ($now >= $deadline) {
+    renderErrorPage('Registrations are now closed. Thank you for your interest in Synergy Sports Fest 2026!');
+}
+
 // ====== Generate a unique 7-char UID, guaranteed not already in DB ======
 function generateUID($conn, $length = 7)
 {
