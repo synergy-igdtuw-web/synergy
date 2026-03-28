@@ -118,7 +118,9 @@ function handleFileUpload($inputName, $relativeDir, $baseName, $isRequired = tru
     $fileExt = $mimeToExt[$mimeType];
 
     $uploadDir = __DIR__ . '/' . trim($relativeDir, '/\\') . '/';
-   
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+    }
 
     $safeBase = preg_replace('/[^A-Za-z0-9_-]/', '_', $baseName);
     if (!$safeBase) $safeBase = 'participant';
@@ -292,9 +294,8 @@ if (isset($_POST['ShotPut'])) $individualSports[] = 'Shot Put';
 if (isset($_POST['Chess']))   $individualSports[] = 'Chess';
 
 $allowedRelayValues = ['4 x 100m'];
-if (isset($_POST['Relay[]']) && is_array($_POST['Relay[]'])) {
-    $validRelay = array_intersect($_POST['Relay[]'], $allowedRelayValues);
-    if (count($validRelay) > 0) $individualSports[] = 'Relay 4 x 100m';
+if (isset($_POST['Relay'])) {
+    $individualSports[] = 'Relay 4 x 100m';
 }
 
 $teamSportNames = [];
